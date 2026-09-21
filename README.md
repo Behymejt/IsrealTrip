@@ -1,7 +1,6 @@
 # Galilee to Jerusalem
 
-A devotional field guide for a ten-day Holy Land pilgrimage, 9–18 November 2026
-(Signature Tours, with Pastor Brent Snook).
+A devotional field guide for a ten-day Holy Land pilgrimage, 9–18 November 2026.
 
 Thirty-five stops across ten days. Each one gives you where you are, why it
 matters, the passages to read (ESV references), what you are actually standing
