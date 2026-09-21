@@ -1,0 +1,1796 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A devotional field guide to a ten-day Holy Land pilgrimage, 9-18 November 2026: a seven-week reading plan, maps, historical background, and every stop with its passages and a question to carry.">
+<meta name="theme-color" content="#F1EFE9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161A" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E3A5F'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23E8E4DA' stroke-width='1.6'/%3E%3Cpath d='M20.5 11.5 L14.6 14.6 L11.5 20.5 L17.4 17.4 Z' fill='%23D4A843'/%3E%3C/svg%3E">
+<title>Galilee to Jerusalem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  :root{
+    --ground:#F1EFE9;
+    --surface:#FBFAF7;
+    --sunken:#E8E5DC;
+    --ink:#1C1E22;
+    --ink-soft:#5B5F67;
+    --ink-faint:#8A8E96;
+    --lapis:#1E3A5F;
+    --lapis-soft:#3A5F8A;
+    --gold:#9A711A;
+    --rubric:#95372B;
+    --line:#DCD8CE;
+    --line-strong:#C5C0B3;
+
+    --f-display:"Newsreader", ui-serif, Georgia, "Times New Roman", serif;
+    --f-util:"IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --wrap:44rem;
+    --gutter:20px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#14161A;
+      --surface:#1B1E24;
+      --sunken:#101216;
+      --ink:#E9E5DB;
+      --ink-soft:#A2A6AE;
+      --ink-faint:#787C85;
+      --lapis:#88AEDA;
+      --lapis-soft:#6E93BC;
+      --gold:#D3A63F;
+      --rubric:#E07E68;
+      --line:#2A2E36;
+      --line-strong:#3A3F49;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#14161A;
+    --surface:#1B1E24;
+    --sunken:#101216;
+    --ink:#E9E5DB;
+    --ink-soft:#A2A6AE;
+    --ink-faint:#787C85;
+    --lapis:#88AEDA;
+    --lapis-soft:#6E93BC;
+    --gold:#D3A63F;
+    --rubric:#E07E68;
+    --line:#2A2E36;
+    --line-strong:#3A3F49;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--f-display);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:var(--wrap);
+    margin:0 auto;
+    padding-inline:var(--gutter);
+  }
+
+  /* ---------- sticky nav ---------- */
+  .navbar{
+    position:sticky;
+    top:env(safe-area-inset-top, 0px);
+    z-index:20;
+    background:color-mix(in srgb, var(--ground) 92%, transparent);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .navbar-inner{
+    max-width:var(--wrap);
+    margin:0 auto;
+    padding-inline:var(--gutter);
+    padding-block:9px 8px;
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+  }
+  .navbar-title{
+    font-family:var(--f-util);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0;
+  }
+  .daystrip{
+    display:flex;
+    gap:5px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding-bottom:2px;
+    margin-inline:calc(var(--gutter) * -1);
+    padding-inline:var(--gutter);
+  }
+  .daystrip::-webkit-scrollbar{display:none;}
+  .daystrip a{
+    flex:0 0 auto;
+    font-family:var(--f-util);
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.03em;
+    text-decoration:none;
+    color:var(--ink-soft);
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:4px 9px;
+    white-space:nowrap;
+    transition:color .15s, border-color .15s, background .15s;
+  }
+  .daystrip a:hover{color:var(--ink);border-color:var(--line-strong);}
+  .daystrip a.is-active{
+    color:var(--ground);
+    background:var(--lapis);
+    border-color:var(--lapis);
+  }
+  :root[data-theme="dark"] .daystrip a.is-active,
+  .daystrip a.is-active{color:var(--ground);}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:2px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    padding-block:44px 30px;
+    border-bottom:1px solid var(--line-strong);
+  }
+  .eyebrow{
+    font-family:var(--f-util);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 12px;
+  }
+  .masthead h1{
+    font-family:var(--f-display);
+    font-weight:400;
+    font-size:clamp(2.4rem, 10vw, 3.5rem);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    margin:0 0 16px;
+    text-wrap:balance;
+  }
+  .masthead h1 em{font-style:italic;color:var(--lapis);}
+  .standfirst{
+    font-size:1.03rem;
+    color:var(--ink-soft);
+    margin:0 0 22px;
+    max-width:34rem;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 10px;
+    font-family:var(--f-util);
+    font-size:11px;
+    color:var(--ink-faint);
+    letter-spacing:.02em;
+  }
+  .meta-row span{
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:3px 8px;
+    background:var(--surface);
+  }
+
+  /* ---------- how to use ---------- */
+  .primer{
+    padding-block:26px 30px;
+    border-bottom:1px solid var(--line);
+  }
+  .primer h2{
+    font-family:var(--f-util);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0 0 14px;
+  }
+  .primer p{margin:0 0 13px;color:var(--ink-soft);font-size:.97rem;}
+  .primer p:last-child{margin-bottom:0;}
+  .primer strong{color:var(--ink);font-weight:500;}
+
+  /* ---------- day sections ---------- */
+  .day{
+    padding-block:38px 6px;
+    scroll-margin-top:calc(92px + env(safe-area-inset-top, 0px));
+  }
+  .day + .day{border-top:1px solid var(--line-strong);}
+  .day-head{margin-bottom:30px;}
+  .day-num{
+    font-family:var(--f-util);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 9px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:baseline;
+  }
+  .day-num .date{color:var(--ink-faint);font-weight:500;letter-spacing:.08em;}
+  .day-head h2{
+    font-family:var(--f-display);
+    font-weight:400;
+    font-size:clamp(1.75rem, 6.5vw, 2.3rem);
+    line-height:1.1;
+    letter-spacing:-.015em;
+    margin:0 0 12px;
+    text-wrap:balance;
+  }
+  .thread{
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1rem;
+    margin:0;
+    padding-left:14px;
+    border-left:2px solid var(--line-strong);
+    max-width:33rem;
+  }
+
+  /* ---------- stops ---------- */
+  .stop{padding-block:26px;}
+  .stop + .stop{border-top:1px solid var(--line);}
+  .stop h3{
+    font-family:var(--f-display);
+    font-weight:500;
+    font-size:1.42rem;
+    line-height:1.2;
+    letter-spacing:-.01em;
+    margin:0 0 6px;
+    text-wrap:balance;
+  }
+  .locator{
+    font-family:var(--f-util);
+    font-size:11.5px;
+    color:var(--ink-faint);
+    letter-spacing:.02em;
+    margin:0 0 14px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:7px;
+  }
+  .tag{
+    font-family:var(--f-util);
+    font-size:9.5px;
+    font-weight:600;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    padding:2px 6px;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+  .tag-dig{color:var(--lapis);background:color-mix(in srgb, var(--lapis) 12%, transparent);}
+  .tag-trad{color:var(--ink-faint);background:var(--sunken);}
+
+
+  .why{ margin:0 0 15px; font-size:1.02rem; line-height:1.55; color:var(--ink); font-weight:500; }
+  .why-label{ display:block; font-family:var(--f-util); font-size:9.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+
+  .refs{
+    list-style:none;
+    margin:0 0 15px;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+  }
+  .refs li{
+    font-family:var(--f-util);
+    font-size:11.5px;
+    font-weight:500;
+    color:var(--lapis);
+    border:1px solid color-mix(in srgb, var(--lapis) 32%, transparent);
+    border-radius:2px;
+    padding:3px 8px;
+    white-space:nowrap;
+  }
+  .refs li.key{
+    background:color-mix(in srgb, var(--lapis) 13%, transparent);
+    border-color:color-mix(in srgb, var(--lapis) 45%, transparent);
+  }
+
+  .stop p{margin:0 0 13px;}
+  .stop p:last-of-type{margin-bottom:16px;}
+  .stop q{
+    font-style:italic;
+    color:var(--ink);
+    quotes:"\201C" "\201D";
+  }
+
+  .rubric{
+    margin:16px 0 0;
+    padding:2px 0 2px 16px;
+    border-left:2px solid var(--rubric);
+  }
+  .rubric p{
+    margin:0;
+    font-style:italic;
+    font-size:1.04rem;
+    line-height:1.5;
+    color:var(--rubric);
+    text-wrap:pretty;
+  }
+  .rubric .rubric-label{
+    display:block;
+    font-family:var(--f-util);
+    font-style:normal;
+    font-size:9.5px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:5px;
+  }
+
+  /* ---------- practical note ---------- */
+  .note{
+    margin:18px 0 0;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:14px 16px;
+  }
+  .note h4{
+    font-family:var(--f-util);
+    font-size:9.5px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 7px;
+  }
+  .note p{
+    margin:0 0 9px;
+    font-size:.93rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+  .note p:last-child{margin-bottom:0;}
+  .note strong{color:var(--ink);font-weight:500;}
+
+  /* ---------- closing ---------- */
+  .colophon{
+    padding-block:34px 52px;
+    border-top:1px solid var(--line-strong);
+    margin-top:38px;
+  }
+  .colophon h2{
+    font-family:var(--f-util);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0 0 14px;
+  }
+  .colophon p{margin:0 0 12px;color:var(--ink-soft);font-size:.95rem;}
+  .colophon p:last-child{margin-bottom:0;}
+  .colophon strong{color:var(--ink);font-weight:500;}
+
+  .journal{
+    list-style:none;
+    margin:0 0 16px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .journal li{
+    font-family:var(--f-display);
+    font-style:italic;
+    color:var(--ink);
+    font-size:.99rem;
+    padding-left:15px;
+    border-left:2px solid var(--gold);
+    line-height:1.45;
+  }
+
+
+
+  /* ---------- reading plan ---------- */
+  .plan-top{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin:18px 0 6px; }
+  .prog{ flex:1 1 180px; min-width:160px; }
+  .prog-bar{ height:5px; border-radius:3px; background:var(--sunken); overflow:hidden; }
+  .prog-fill{ height:100%; width:0; background:var(--gold); border-radius:3px; transition:width .25s ease; }
+  .prog-txt{ font-family:var(--f-util); font-size:11px; color:var(--ink-faint); margin:6px 0 0; letter-spacing:.02em; }
+  .jump-today{ font-family:var(--f-util); font-size:11.5px; font-weight:600; letter-spacing:.03em; color:var(--ground); background:var(--lapis); border:1px solid var(--lapis); border-radius:2px; padding:6px 11px; cursor:pointer; }
+  .jump-today:hover{ background:var(--rubric); border-color:var(--rubric); }
+
+  .wk{ padding-block:24px 4px; border-top:1px solid var(--line); }
+  .wk-head{ display:flex; align-items:baseline; gap:10px; font-family:var(--f-util); font-size:10.5px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; margin:0 0 6px; }
+  .wk-n{ color:var(--gold); }
+  .wk-r{ color:var(--ink-faint); letter-spacing:.08em; }
+  .bg .wk-t{ font-family:var(--f-display); font-weight:500; font-size:1.3rem; line-height:1.2; margin:0 0 3px; color:var(--ink); text-transform:none; letter-spacing:-.01em; }
+  .wk-trip{ font-family:var(--f-util); font-size:11px; color:var(--lapis); margin:0 0 12px; }
+
+  .rdlist{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; }
+  .rd{ display:grid; grid-template-columns:20px 2.5rem 1fr; gap:0 11px; align-items:start; padding:10px 0 10px 10px; border-bottom:1px solid var(--line); margin-left:-10px; border-left:2px solid transparent; }
+  .rd input[type="checkbox"]{ margin:3px 0 0; width:16px; height:16px; accent-color:var(--lapis); cursor:pointer; }
+  .rd-date{ font-family:var(--f-util); line-height:1.15; padding-top:1px; cursor:pointer; display:block; }
+  .rd-dow{ display:block; font-size:9px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); }
+  .rd-dn{ display:block; font-size:16px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; }
+  .rd-mo{ display:block; font-size:9px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); }
+  .rd-body{ min-width:0; }
+  .rd-ref{ margin:0 0 3px; font-size:1.02rem; font-weight:500; line-height:1.35; }
+  .rd-ref label{ cursor:pointer; }
+  .rd-day{ display:inline-block; font-family:var(--f-util); font-size:9.5px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--lapis); background:color-mix(in srgb, var(--lapis) 12%, transparent); border-radius:2px; padding:2px 5px; vertical-align:2px; margin-left:4px; white-space:nowrap; }
+  .rd-note{ margin:0; font-size:.92rem; line-height:1.5; color:var(--ink-soft); }
+  .rd-today{ display:none; font-family:var(--f-util); font-size:9.5px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--ground); background:var(--rubric); border-radius:2px; padding:2px 5px; vertical-align:2px; margin-left:4px; }
+  .rd.is-today{ border-left-color:var(--rubric); background:color-mix(in srgb, var(--rubric) 5%, transparent); scroll-margin-top:calc(110px + env(safe-area-inset-top, 0px)); }
+  .rd.is-today .rd-today{ display:inline-block; }
+  .rd.is-done .rd-ref label{ color:var(--ink-faint); }
+  .rd.is-done .rd-note{ color:var(--ink-faint); }
+
+  /* ---------- figures & maps ---------- */
+  :root{ --water:#C9D8E6; --water-ink:#35587F; --land:#F7F5EF; --route:#95372B; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --water:#1D2C3D; --water-ink:#8FB1D6; --land:#1B1E24; --route:#E07E68; } }
+  :root[data-theme="dark"]{ --water:#1D2C3D; --water-ink:#8FB1D6; --land:#1B1E24; --route:#E07E68; }
+
+  .fig{ margin:22px 0 4px; }
+  .fig-frame{ border:1px solid var(--line-strong); border-radius:3px; overflow:hidden; background:var(--land); }
+  .fig svg{ display:block; width:100%; height:auto; max-width:100%; }
+  .fig figcaption{ font-family:var(--f-util); font-size:11.5px; line-height:1.5; color:var(--ink-faint); margin-top:8px; }
+  .fig figcaption strong{ color:var(--ink-soft); font-weight:600; }
+
+  .map text, .chart text{ font-family:var(--f-util); }
+  .m-sea{ fill:var(--water); }
+  .m-land{ fill:var(--land); }
+  .m-lake{ fill:var(--water); stroke:var(--water-ink); stroke-width:.6; stroke-opacity:.5; }
+  .m-river{ fill:none; stroke:var(--water-ink); stroke-width:1.3; stroke-opacity:.8; }
+  .m-route{ fill:none; stroke:var(--route); stroke-width:1.4; stroke-dasharray:4 3; stroke-linejoin:round; }
+  .m-dot{ fill:var(--ink); }
+  .m-dot2{ fill:var(--ink-faint); }
+  .m-base{ fill:var(--land); stroke:var(--gold); stroke-width:2; }
+  .m-basec{ fill:var(--gold); }
+  .m-lab{ font-size:10px; fill:var(--ink); font-weight:500; }
+  .m-lab-b{ font-size:11px; font-weight:600; }
+  .m-small{ font-size:8.5px; fill:var(--ink-soft); }
+  .m-it{ font-style:italic; }
+  .m-water{ font-size:11px; font-style:italic; fill:var(--water-ink); font-family:var(--f-display) !important; }
+  .m-water-s{ font-size:9.5px; }
+  .m-scale line{ stroke:var(--ink-soft); stroke-width:1.2; }
+  .m-northp{ fill:var(--ink-soft); }
+
+  .oc-valley{ fill:none; stroke:var(--water-ink); stroke-width:1; stroke-dasharray:2 3; stroke-opacity:.7; }
+  .oc-olives{ fill:color-mix(in srgb, var(--gold) 12%, var(--land)); }
+  .oc-city{ fill:var(--surface); stroke:var(--ink-soft); stroke-width:2.2; stroke-linejoin:round; }
+  .oc-tm{ fill:color-mix(in srgb, var(--lapis) 10%, var(--surface)); stroke:var(--lapis-soft); stroke-width:1; }
+  .oc-dome{ fill:var(--gold); }
+  .oc-kotel{ stroke:var(--rubric); stroke-width:3.5; stroke-linecap:round; }
+  .oc-q{ font-size:8px; font-weight:600; letter-spacing:.14em; fill:var(--ink-faint); }
+  .oc-via{ fill:none; stroke:var(--route); stroke-width:1.6; stroke-dasharray:3 2.5; }
+  .oc-vial{ fill:var(--route); font-style:italic; }
+  .oc-gate{ fill:var(--ink-soft); }
+  .oc-cod{ fill:color-mix(in srgb, var(--gold) 16%, var(--land)); stroke:var(--gold); stroke-width:.8; stroke-opacity:.6; }
+  .oc-lead{ stroke:var(--ink-faint); stroke-width:.8; }
+
+  .c-grid{ stroke:var(--line); stroke-width:1; }
+  .c-zero{ stroke:var(--ink-soft); stroke-width:1; }
+  .c-ax{ font-size:9px; fill:var(--ink-faint); }
+  .c-area{ fill:color-mix(in srgb, var(--gold) 16%, transparent); }
+  .c-line{ fill:none; stroke:var(--gold); stroke-width:2.2; stroke-linejoin:round; }
+  .c-ref{ stroke:var(--water-ink); stroke-width:1; stroke-dasharray:3 3; }
+  .c-refl{ fill:var(--water-ink); font-style:italic; }
+  .c-pt{ fill:var(--surface); stroke:var(--gold); stroke-width:2; }
+  .c-lab{ font-size:10.5px; font-weight:600; fill:var(--ink); }
+
+
+  .m-badge rect{ fill:var(--lapis); stroke:var(--land); stroke-width:1.5; }
+  .m-badge text{ font-size:8px; font-weight:600; fill:var(--land); font-variant-numeric:tabular-nums; }
+  .m-badge-a:hover rect, .m-badge-a:focus rect{ fill:var(--rubric); }
+  .m-badge-a:focus{ outline:none; }
+  .m-badge-a:focus-visible rect{ stroke:var(--gold); stroke-width:2; }
+
+  /* ---------- background section ---------- */
+  .bg{ padding-block:34px 10px; border-bottom:1px solid var(--line-strong); scroll-margin-top:calc(92px + env(safe-area-inset-top, 0px)); }
+  .bg h2{ font-family:var(--f-display); font-weight:400; font-size:clamp(1.6rem,6vw,2.1rem); line-height:1.1; letter-spacing:-.015em; margin:0 0 10px; text-wrap:balance; }
+  .bg > p{ margin:0 0 14px; color:var(--ink-soft); }
+  .bg h3{ font-family:var(--f-util); font-size:10.5px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); margin:30px 0 12px; }
+
+  .dist{ width:100%; border-collapse:collapse; font-family:var(--f-util); font-size:12.5px; }
+  .dist td{ padding:8px 0; border-bottom:1px solid var(--line); vertical-align:baseline; }
+  .dist td:last-child{ text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--ink); font-weight:600; padding-left:12px; }
+  .dist td:first-child{ color:var(--ink-soft); }
+  .dist-note{ font-size:.93rem; color:var(--ink-soft); margin:12px 0 0; }
+
+  .layers{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; }
+  .layers li{ display:grid; grid-template-columns:5.4rem 1fr; gap:4px 14px; padding:12px 0; border-bottom:1px solid var(--line); }
+  .layers .yrs{ font-family:var(--f-util); font-size:11px; font-weight:600; color:var(--ink-faint); font-variant-numeric:tabular-nums; line-height:1.4; padding-top:3px; }
+  .layers .era{ font-weight:500; font-size:1.02rem; line-height:1.3; margin:0 0 3px; }
+  .layers .what{ font-size:.92rem; color:var(--ink-soft); line-height:1.5; margin:0 0 5px; }
+  .layers .where{ font-family:var(--f-util); font-size:11px; color:var(--lapis); line-height:1.5; margin:0; }
+  .layers li.now .era{ color:var(--lapis); }
+
+  .people{ display:grid; grid-template-columns:1fr; gap:0; }
+  .person{ padding:13px 0; border-bottom:1px solid var(--line); }
+  .person h4{ font-family:var(--f-display); font-weight:500; font-size:1.08rem; margin:0 0 2px; line-height:1.3; }
+  .person .dates{ font-family:var(--f-util); font-size:10.5px; font-weight:500; color:var(--ink-faint); letter-spacing:.03em; margin:0 0 6px; }
+  .person p{ margin:0; font-size:.93rem; color:var(--ink-soft); line-height:1.55; }
+  .person .seen{ display:block; margin-top:5px; font-family:var(--f-util); font-size:11px; color:var(--lapis); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
+  }
+  html{scroll-behavior:smooth;}
+</style>
+
+<style>
+  html{ -webkit-text-size-adjust:100%; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+  :root{
+    color-scheme: light dark;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  body{ margin:0; }
+
+  @media print{
+    .navbar, .plan-top, .jump-today{ display:none !important; }
+    body{ background:#fff; color:#111; font-size:11pt; }
+    .wrap{ max-width:none; }
+    .stop, .rd, .person, .layers li{ break-inside:avoid; page-break-inside:avoid; }
+    .day{ break-before:page; page-break-before:always; }
+    .day:first-of-type{ break-before:auto; page-break-before:auto; }
+    .fig-frame{ border-color:#bbb; }
+    .rubric p{ color:#8a3327; }
+    .why-label, .eyebrow, .day-num{ color:#8a6a15; }
+    a{ text-decoration:none; color:inherit; }
+  }
+</style>
+</head>
+<body>
+
+
+<nav class="navbar" aria-label="Jump to day">
+  <div class="navbar-inner">
+    <p class="navbar-title">Holy Land &middot; 9&ndash;18 November 2026</p>
+    <div class="daystrip" id="daystrip">
+      <a href="#plan">Plan</a>
+      <a href="#maps">Maps</a>
+      <a href="#layers">History</a>
+      <a href="#day1">1 &middot; Mon</a>
+      <a href="#day2">2 &middot; Tue</a>
+      <a href="#day3">3 &middot; Wed</a>
+      <a href="#day4">4 &middot; Thu</a>
+      <a href="#day5">5 &middot; Fri</a>
+      <a href="#day6">6 &middot; Sat</a>
+      <a href="#day7">7 &middot; Sun</a>
+      <a href="#day8">8 &middot; Mon</a>
+      <a href="#day9">9 &middot; Tue</a>
+      <a href="#day10">10 &middot; Wed</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">A devotional field guide</p>
+    <h1>Galilee to <em>Jerusalem</em></h1>
+    <p class="standfirst">Thirty-odd stops across ten days, each with the passage that belongs to it, what you are actually standing in, and one question to carry out of the place.</p>
+    <div class="meta-row">
+      <span>Netanya &rarr; Tiberias &rarr; Jerusalem</span>
+      <span>Scripture refs in ESV</span>
+      <span>Pastor Brent Snook &middot; Signature Tours</span>
+    </div>
+  </header>
+
+  <section class="primer">
+    <h2>How to use this</h2>
+    <p>Each stop gives you five things: <strong>where you are</strong>, <strong>why it matters</strong> in a sentence or two, <strong>what to read</strong>, <strong>what you're looking at</strong>, and a <strong>question in red</strong>. If you only have thirty seconds before the group moves, read the gold &ldquo;why it matters&rdquo; line. The red question is the only part that isn't information. Sit with it on the bus.</p>
+    <p>Passage references are listed rather than printed out — read them from your own Bible, where you can mark them. The one marked <strong>key</strong> is the passage to read if you only read one.</p>
+    <p>The seven-week reading plan comes first, then the route map and the history background. A map of the lake sits in Day Four, the elevation profile in Day Seven, and the Old City map in Day Eight, so each one is on the day you need it.</p>
+    <p>Two labels appear beside site names. <strong>Excavated</strong> means the stones in front of you are the stones — this is the place, archaeologically. <strong>Traditional</strong> means the location is commemorative: early, venerated, sometimes very early, but held by memory rather than evidence. Neither label is a verdict on the site's worth. A place people have prayed in for fifteen centuries is doing something a survey marker can't.</p>
+  </section>
+
+  <section class="bg" id="plan">
+    <h2>Seven weeks of reading</h2>
+    <p>Fifteen minutes a day from 21 September until the night before you fly. It runs in the order of your route rather than the order of the Bible: the coast first, then the lake, then the desert, then Jerusalem. Mark runs the whole way through, a chapter every few days, because Mark travels the same path your bus does, Galilee to the north to Jericho to Jerusalem.</p>
+    <p>Read it out of your own Bible. The blue tag on each day shows which day of the trip that reading belongs to. If you fall behind, skip to today rather than trying to catch up.</p>
+    <div class="plan-top">
+      <div class="prog"><div class="prog-bar"><div class="prog-fill" id="progFill"></div></div><p class="prog-txt" id="progTxt">0 of 50 read</p></div>
+      <button type="button" class="jump-today" id="jumpToday">Go to today</button>
+    </div>
+<div class="wk"><p class="wk-head"><span class="wk-n">Week 1</span><span class="wk-r">21&ndash;27 Sep</span></p><h3 class="wk-t">The land and the coast</h3><p class="wk-trip">Trip days 1&ndash;3</p><ul class="rdlist">
+<li class="rd" data-date="2026-09-21"><input type="checkbox" id="rd-0921" aria-describedby="rd-0921-n"><label for="rd-0921" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">21</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0921">Genesis 12:1&ndash;9</label> <span class="rd-day">Day 1</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0921-n">Abraham is called into the land you are about to walk.</p></div></li>
+<li class="rd" data-date="2026-09-22"><input type="checkbox" id="rd-0922" aria-describedby="rd-0922-n"><label for="rd-0922" class="rd-date"><span class="rd-dow">Tue</span><span class="rd-dn">22</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0922">Psalms 121&ndash;122</label> <span class="rd-day">Day 1</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0922-n">The pilgrims&rsquo; songbook. Read these again on the plane.</p></div></li>
+<li class="rd" data-date="2026-09-23"><input type="checkbox" id="rd-0923" aria-describedby="rd-0923-n"><label for="rd-0923" class="rd-date"><span class="rd-dow">Wed</span><span class="rd-dn">23</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0923">Deuteronomy 8:1&ndash;10; 11:10&ndash;15</label> <span class="rd-day">Day 2</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0923-n">The land as Israel was promised it, including &ldquo;the early rain&rdquo; that falls in your November.</p></div></li>
+<li class="rd" data-date="2026-09-24"><input type="checkbox" id="rd-0924" aria-describedby="rd-0924-n"><label for="rd-0924" class="rd-date"><span class="rd-dow">Thu</span><span class="rd-dn">24</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0924">Jonah 1&ndash;2</label> <span class="rd-day">Day 2</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0924-n">Jonah sails from Joppa, just down the coast from Netanya.</p></div></li>
+<li class="rd" data-date="2026-09-25"><input type="checkbox" id="rd-0925" aria-describedby="rd-0925-n"><label for="rd-0925" class="rd-date"><span class="rd-dow">Fri</span><span class="rd-dn">25</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0925">Acts 9:32&ndash;10:23</label> <span class="rd-day">Day 2</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0925-n">Peter at Joppa, and the vision on the rooftop.</p></div></li>
+<li class="rd" data-date="2026-09-26"><input type="checkbox" id="rd-0926" aria-describedby="rd-0926-n"><label for="rd-0926" class="rd-date"><span class="rd-dow">Sat</span><span class="rd-dn">26</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0926">Acts 10:24&ndash;48</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0926-n">Peter in Cornelius&rsquo;s house at Caesarea.</p></div></li>
+<li class="rd" data-date="2026-09-27"><input type="checkbox" id="rd-0927" aria-describedby="rd-0927-n"><label for="rd-0927" class="rd-date"><span class="rd-dow">Sun</span><span class="rd-dn">27</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0927">Acts 25:1&ndash;12; 26</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0927-n">Paul on trial at Caesarea before Festus and Agrippa.</p></div></li>
+</ul></div>
+<div class="wk"><p class="wk-head"><span class="wk-n">Week 2</span><span class="wk-r">28 Sep&ndash;4 Oct</span></p><h3 class="wk-t">Carmel, the valley, and Nazareth</h3><p class="wk-trip">Trip day 3</p><ul class="rdlist">
+<li class="rd" data-date="2026-09-28"><input type="checkbox" id="rd-0928" aria-describedby="rd-0928-n"><label for="rd-0928" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">28</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0928">1 Kings 18</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0928-n">Elijah on Mount Carmel.</p></div></li>
+<li class="rd" data-date="2026-09-29"><input type="checkbox" id="rd-0929" aria-describedby="rd-0929-n"><label for="rd-0929" class="rd-date"><span class="rd-dow">Tue</span><span class="rd-dn">29</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0929">1 Kings 19</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0929-n">The same prophet the next day, running for his life.</p></div></li>
+<li class="rd" data-date="2026-09-30"><input type="checkbox" id="rd-0930" aria-describedby="rd-0930-n"><label for="rd-0930" class="rd-date"><span class="rd-dow">Wed</span><span class="rd-dn">30</span><span class="rd-mo">Sep</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-0930">Judges 4&ndash;5</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-0930-n">Deborah and Barak fight in the valley below Carmel.</p></div></li>
+<li class="rd" data-date="2026-10-01"><input type="checkbox" id="rd-1001" aria-describedby="rd-1001-n"><label for="rd-1001" class="rd-date"><span class="rd-dow">Thu</span><span class="rd-dn">1</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1001">2 Kings 23:25&ndash;30; Revelation 16:12&ndash;16</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1001-n">King Josiah falls at Megiddo, and the valley gives Revelation the word Armageddon.</p></div></li>
+<li class="rd" data-date="2026-10-02"><input type="checkbox" id="rd-1002" aria-describedby="rd-1002-n"><label for="rd-1002" class="rd-date"><span class="rd-dow">Fri</span><span class="rd-dn">2</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1002">Luke 1:26&ndash;56</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1002-n">The angel comes to a young woman in Nazareth.</p></div></li>
+<li class="rd" data-date="2026-10-03"><input type="checkbox" id="rd-1003" aria-describedby="rd-1003-n"><label for="rd-1003" class="rd-date"><span class="rd-dow">Sat</span><span class="rd-dn">3</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1003">Luke 2:39&ndash;52; 4:14&ndash;30</label> <span class="rd-day">Day 3</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1003-n">Jesus&rsquo;s boyhood in Nazareth, and the day the town turned on him.</p></div></li>
+<li class="rd" data-date="2026-10-04"><input type="checkbox" id="rd-1004" aria-describedby="rd-1004-n"><label for="rd-1004" class="rd-date"><span class="rd-dow">Sun</span><span class="rd-dn">4</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1004">Mark 1</label> <span class="rd-day">Days 4&ndash;5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1004-n">Start Mark. The baptism, the call by the lake, and one long day in Capernaum.</p></div></li>
+</ul></div>
+<div class="wk"><p class="wk-head"><span class="wk-n">Week 3</span><span class="wk-r">5&ndash;11 Oct</span></p><h3 class="wk-t">The lake</h3><p class="wk-trip">Trip days 4&ndash;5</p><ul class="rdlist">
+<li class="rd" data-date="2026-10-05"><input type="checkbox" id="rd-1005" aria-describedby="rd-1005-n"><label for="rd-1005" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">5</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1005">Mark 2</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1005-n">The roof comes off in Capernaum.</p></div></li>
+<li class="rd" data-date="2026-10-06"><input type="checkbox" id="rd-1006" aria-describedby="rd-1006-n"><label for="rd-1006" class="rd-date"><span class="rd-dow">Tue</span><span class="rd-dn">6</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1006">Mark 3; Luke 8:1&ndash;3</label> <span class="rd-day">Day 4</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1006-n">The Twelve are chosen, and the women who funded the ministry, Mary of Magdala first.</p></div></li>
+<li class="rd" data-date="2026-10-07"><input type="checkbox" id="rd-1007" aria-describedby="rd-1007-n"><label for="rd-1007" class="rd-date"><span class="rd-dow">Wed</span><span class="rd-dn">7</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1007">Mark 4</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1007-n">Parables taught from a boat, then the storm.</p></div></li>
+<li class="rd" data-date="2026-10-08"><input type="checkbox" id="rd-1008" aria-describedby="rd-1008-n"><label for="rd-1008" class="rd-date"><span class="rd-dow">Thu</span><span class="rd-dn">8</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1008">Mark 5</label> <span class="rd-day">Day 4</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1008-n">The man at Kursi, then Jairus&rsquo;s daughter.</p></div></li>
+<li class="rd" data-date="2026-10-09"><input type="checkbox" id="rd-1009" aria-describedby="rd-1009-n"><label for="rd-1009" class="rd-date"><span class="rd-dow">Fri</span><span class="rd-dn">9</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1009">Luke 5:1&ndash;11</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1009-n">The great catch of fish, and Peter&rsquo;s call.</p></div></li>
+<li class="rd" data-date="2026-10-10"><input type="checkbox" id="rd-1010" aria-describedby="rd-1010-n"><label for="rd-1010" class="rd-date"><span class="rd-dow">Sat</span><span class="rd-dn">10</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1010">Matthew 5</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1010-n">The Beatitudes.</p></div></li>
+<li class="rd" data-date="2026-10-11"><input type="checkbox" id="rd-1011" aria-describedby="rd-1011-n"><label for="rd-1011" class="rd-date"><span class="rd-dow">Sun</span><span class="rd-dn">11</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1011">Matthew 6&ndash;7</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1011-n">The rest of the Sermon on the Mount.</p></div></li>
+</ul></div>
+<div class="wk"><p class="wk-head"><span class="wk-n">Week 4</span><span class="wk-r">12&ndash;18 Oct</span></p><h3 class="wk-t">Bread, the north, and the turn</h3><p class="wk-trip">Trip days 4&ndash;5</p><ul class="rdlist">
+<li class="rd" data-date="2026-10-12"><input type="checkbox" id="rd-1012" aria-describedby="rd-1012-n"><label for="rd-1012" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">12</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1012">Mark 6</label> <span class="rd-day">Days 4&ndash;5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1012-n">John beheaded by Antipas, the feeding of the five thousand, and the walk on the water.</p></div></li>
+<li class="rd" data-date="2026-10-13"><input type="checkbox" id="rd-1013" aria-describedby="rd-1013-n"><label for="rd-1013" class="rd-date"><span class="rd-dow">Tue</span><span class="rd-dn">13</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1013">John 6</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1013-n">The Bread of Life sermon in the Capernaum synagogue. John is the only Gospel that names Tiberias.</p></div></li>
+<li class="rd" data-date="2026-10-14"><input type="checkbox" id="rd-1014" aria-describedby="rd-1014-n"><label for="rd-1014" class="rd-date"><span class="rd-dow">Wed</span><span class="rd-dn">14</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1014">Mark 7</label> <span class="rd-day">Day 4</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1014-n">Jesus goes into Gentile country, to Tyre and the Decapolis.</p></div></li>
+<li class="rd" data-date="2026-10-15"><input type="checkbox" id="rd-1015" aria-describedby="rd-1015-n"><label for="rd-1015" class="rd-date"><span class="rd-dow">Thu</span><span class="rd-dn">15</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1015">Psalm 22</label> <span class="rd-day">Day 4</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1015-n">The psalm with the bulls of Bashan, which Jesus quoted from the cross.</p></div></li>
+<li class="rd" data-date="2026-10-16"><input type="checkbox" id="rd-1016" aria-describedby="rd-1016-n"><label for="rd-1016" class="rd-date"><span class="rd-dow">Fri</span><span class="rd-dn">16</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1016">Mark 8</label> <span class="rd-day">Day 4</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1016-n">Caesarea Philippi: &ldquo;Who do you say that I am?&rdquo;</p></div></li>
+<li class="rd" data-date="2026-10-17"><input type="checkbox" id="rd-1017" aria-describedby="rd-1017-n"><label for="rd-1017" class="rd-date"><span class="rd-dow">Sat</span><span class="rd-dn">17</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1017">Matthew 16:13&ndash;28</label> <span class="rd-day">Day 4</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1017-n">Matthew&rsquo;s fuller telling: the rock, and the gates of hell.</p></div></li>
+<li class="rd" data-date="2026-10-18"><input type="checkbox" id="rd-1018" aria-describedby="rd-1018-n"><label for="rd-1018" class="rd-date"><span class="rd-dow">Sun</span><span class="rd-dn">18</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1018">Mark 9</label> <span class="rd-day">Days 3&ndash;5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1018-n">The Transfiguration, and back to Capernaum.</p></div></li>
+</ul></div>
+<div class="wk"><p class="wk-head"><span class="wk-n">Week 5</span><span class="wk-r">19&ndash;25 Oct</span></p><h3 class="wk-t">Kings, shepherds, and the climb</h3><p class="wk-trip">Trip days 5&ndash;6</p><ul class="rdlist">
+<li class="rd" data-date="2026-10-19"><input type="checkbox" id="rd-1019" aria-describedby="rd-1019-n"><label for="rd-1019" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">19</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1019">1 Samuel 31; 2 Samuel 1:17&ndash;27</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1019-n">Saul&rsquo;s body on the wall at Beit She&rsquo;an, and David&rsquo;s lament.</p></div></li>
+<li class="rd" data-date="2026-10-20"><input type="checkbox" id="rd-1020" aria-describedby="rd-1020-n"><label for="rd-1020" class="rd-date"><span class="rd-dow">Tue</span><span class="rd-dn">20</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1020">Psalms 120&ndash;127</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1020-n">The Songs of Ascents, part one.</p></div></li>
+<li class="rd" data-date="2026-10-21"><input type="checkbox" id="rd-1021" aria-describedby="rd-1021-n"><label for="rd-1021" class="rd-date"><span class="rd-dow">Wed</span><span class="rd-dn">21</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1021">Psalms 128&ndash;134</label> <span class="rd-day">Day 5</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1021-n">The Songs of Ascents, part two.</p></div></li>
+<li class="rd" data-date="2026-10-22"><input type="checkbox" id="rd-1022" aria-describedby="rd-1022-n"><label for="rd-1022" class="rd-date"><span class="rd-dow">Thu</span><span class="rd-dn">22</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1022">1 Samuel 16</label> <span class="rd-day">Day 6</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1022-n">David anointed in Bethlehem.</p></div></li>
+<li class="rd" data-date="2026-10-23"><input type="checkbox" id="rd-1023" aria-describedby="rd-1023-n"><label for="rd-1023" class="rd-date"><span class="rd-dow">Fri</span><span class="rd-dn">23</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1023">1 Samuel 17</label> <span class="rd-day">Day 6</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1023-n">David and Goliath in the Valley of Elah.</p></div></li>
+<li class="rd" data-date="2026-10-24"><input type="checkbox" id="rd-1024" aria-describedby="rd-1024-n"><label for="rd-1024" class="rd-date"><span class="rd-dow">Sat</span><span class="rd-dn">24</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1024">Ruth 1&ndash;4</label> <span class="rd-day">Day 6</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1024-n">A love story set in Bethlehem&rsquo;s fields. About fifteen minutes.</p></div></li>
+<li class="rd" data-date="2026-10-25"><input type="checkbox" id="rd-1025" aria-describedby="rd-1025-n"><label for="rd-1025" class="rd-date"><span class="rd-dow">Sun</span><span class="rd-dn">25</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1025">Micah 5:2&ndash;5; Luke 2:1&ndash;20</label> <span class="rd-day">Day 6</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1025-n">Bethlehem foretold, and the night the shepherds were told.</p></div></li>
+</ul></div>
+<div class="wk"><p class="wk-head"><span class="wk-n">Week 6</span><span class="wk-r">26 Oct&ndash;1 Nov</span></p><h3 class="wk-t">Down to the Dead Sea</h3><p class="wk-trip">Trip day 7</p><ul class="rdlist">
+<li class="rd" data-date="2026-10-26"><input type="checkbox" id="rd-1026" aria-describedby="rd-1026-n"><label for="rd-1026" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">26</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1026">Psalm 23; Luke 10:25&ndash;37</label> <span class="rd-day">Day 7</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1026-n">The shepherd&rsquo;s psalm, and the road down to Jericho.</p></div></li>
+<li class="rd" data-date="2026-10-27"><input type="checkbox" id="rd-1027" aria-describedby="rd-1027-n"><label for="rd-1027" class="rd-date"><span class="rd-dow">Tue</span><span class="rd-dn">27</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1027">Luke 3:1&ndash;22; Matthew 4:1&ndash;11</label> <span class="rd-day">Day 7</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1027-n">John in the wilderness, then the forty days.</p></div></li>
+<li class="rd" data-date="2026-10-28"><input type="checkbox" id="rd-1028" aria-describedby="rd-1028-n"><label for="rd-1028" class="rd-date"><span class="rd-dow">Wed</span><span class="rd-dn">28</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1028">Isaiah 40</label> <span class="rd-day">Day 7</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1028-n">&ldquo;A voice cries in the wilderness.&rdquo; Found complete in the Great Isaiah Scroll at Qumran.</p></div></li>
+<li class="rd" data-date="2026-10-29"><input type="checkbox" id="rd-1029" aria-describedby="rd-1029-n"><label for="rd-1029" class="rd-date"><span class="rd-dow">Thu</span><span class="rd-dn">29</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1029">Isaiah 52:13&ndash;53:12</label> <span class="rd-day">Day 7</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1029-n">The suffering servant, from the same scroll.</p></div></li>
+<li class="rd" data-date="2026-10-30"><input type="checkbox" id="rd-1030" aria-describedby="rd-1030-n"><label for="rd-1030" class="rd-date"><span class="rd-dow">Fri</span><span class="rd-dn">30</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1030">1 Samuel 24; Psalm 57</label> <span class="rd-day">Day 7</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1030-n">David spares Saul in a cave at En Gedi.</p></div></li>
+<li class="rd" data-date="2026-10-31"><input type="checkbox" id="rd-1031" aria-describedby="rd-1031-n"><label for="rd-1031" class="rd-date"><span class="rd-dow">Sat</span><span class="rd-dn">31</span><span class="rd-mo">Oct</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1031">Joshua 6; Mark 10</label> <span class="rd-day">Day 7</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1031-n">Jericho&rsquo;s walls, then Jesus on the Jericho road and blind Bartimaeus.</p></div></li>
+<li class="rd" data-date="2026-11-01"><input type="checkbox" id="rd-1101" aria-describedby="rd-1101-n"><label for="rd-1101" class="rd-date"><span class="rd-dow">Sun</span><span class="rd-dn">1</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1101">Luke 19:1&ndash;10; Ezekiel 47:1&ndash;12</label> <span class="rd-day">Day 7</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1101-n">Zacchaeus, and the river that makes the Dead Sea fresh.</p></div></li>
+</ul></div>
+<div class="wk"><p class="wk-head"><span class="wk-n">Week 7</span><span class="wk-r">2&ndash;8 Nov</span></p><h3 class="wk-t">Jerusalem</h3><p class="wk-trip">Trip days 6, 8 and 9</p><ul class="rdlist">
+<li class="rd" data-date="2026-11-02"><input type="checkbox" id="rd-1102" aria-describedby="rd-1102-n"><label for="rd-1102" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">2</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1102">Luke 19:28&ndash;44; Mark 11</label> <span class="rd-day">Days 6, 8</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1102-n">The entry over the Mount of Olives, the weeping, and the Temple.</p></div></li>
+<li class="rd" data-date="2026-11-03"><input type="checkbox" id="rd-1103" aria-describedby="rd-1103-n"><label for="rd-1103" class="rd-date"><span class="rd-dow">Tue</span><span class="rd-dn">3</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1103">Mark 12; John 9</label> <span class="rd-day">Days 8&ndash;9</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1103-n">Teaching in the Temple courts, and a man healed at the Pool of Siloam.</p></div></li>
+<li class="rd" data-date="2026-11-04"><input type="checkbox" id="rd-1104" aria-describedby="rd-1104-n"><label for="rd-1104" class="rd-date"><span class="rd-dow">Wed</span><span class="rd-dn">4</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1104">Mark 13</label> <span class="rd-day">Days 6, 8</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1104-n">On the Mount of Olives: &ldquo;Not one stone will be left.&rdquo;</p></div></li>
+<li class="rd" data-date="2026-11-05"><input type="checkbox" id="rd-1105" aria-describedby="rd-1105-n"><label for="rd-1105" class="rd-date"><span class="rd-dow">Thu</span><span class="rd-dn">5</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1105">Mark 14</label> <span class="rd-day">Days 6, 9</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1105-n">The Upper Room, Gethsemane, and Caiaphas&rsquo;s courtyard.</p></div></li>
+<li class="rd" data-date="2026-11-06"><input type="checkbox" id="rd-1106" aria-describedby="rd-1106-n"><label for="rd-1106" class="rd-date"><span class="rd-dow">Fri</span><span class="rd-dn">6</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1106">Mark 15</label> <span class="rd-day">Day 8</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1106-n">The road to the cross, and the burial.</p></div></li>
+<li class="rd" data-date="2026-11-07"><input type="checkbox" id="rd-1107" aria-describedby="rd-1107-n"><label for="rd-1107" class="rd-date"><span class="rd-dow">Sat</span><span class="rd-dn">7</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1107">Mark 16; John 20</label> <span class="rd-day">Days 8&ndash;9</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1107-n">The empty tomb, and Mary in the garden.</p></div></li>
+<li class="rd" data-date="2026-11-08"><input type="checkbox" id="rd-1108" aria-describedby="rd-1108-n"><label for="rd-1108" class="rd-date"><span class="rd-dow">Sun</span><span class="rd-dn">8</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1108">John 21; Luke 24</label> <span class="rd-day">Days 5, 9</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1108-n">Breakfast on the shore, and the road to Emmaus. You fly tomorrow.</p></div></li>
+</ul></div>
+<div class="wk"><p class="wk-head"><span class="wk-n">In flight</span><span class="wk-r">9 Nov</span></p><h3 class="wk-t">On the way</h3><ul class="rdlist">
+<li class="rd" data-date="2026-11-09"><input type="checkbox" id="rd-1109" aria-describedby="rd-1109-n"><label for="rd-1109" class="rd-date"><span class="rd-dow">Mon</span><span class="rd-dn">9</span><span class="rd-mo">Nov</span></label><div class="rd-body"><p class="rd-ref"><label for="rd-1109">Acts 1&ndash;2; Psalm 121</label> <span class="rd-day">Day 1</span><span class="rd-today">Today</span></p><p class="rd-note" id="rd-1109-n">The Ascension from the Mount of Olives and Pentecost on Mount Zion, read somewhere over the Atlantic. Then the pilgrim&rsquo;s psalm one more time.</p></div></li></ul></div>
+    <p class="dist-note">Ticks are saved in this browser on this device only, so they will not follow you to your phone, and your wife keeps her own. Nothing is sent anywhere.</p>
+  </section>
+
+  <section class="bg" id="maps">
+    <h2>The land, at scale</h2>
+    <p>The first thing most pilgrims say is how small it is. Everything you will visit fits on this one map, and the whole Galilean ministry happened in the little oval at the top.</p>
+    <figure class="fig">
+      <div class="fig-frame"><svg class="map" viewBox="0 0 370 540" role="img" aria-labelledby="rm-t"><title id="rm-t">Route map of the ten-day tour, from the coast to Galilee to Jerusalem and the Dead Sea</title>
+<rect x="0" y="0" width="370" height="540" class="m-sea"/>
+<path d="M-17.0,532.5 L27.6,452.5 L53.1,415.0 L70.0,382.5 L93.4,332.5 L99.8,312.5 L116.7,250.0 L125.2,207.5 L138.0,157.5 L140.1,125.0 L154.9,132.5 L163.4,102.5 L169.8,60.0 L186.8,0.0 L382.0,0.0 L382.0,532.5 Z" class="m-land"/>
+<path d="M275.9,110.7 L284.4,115.0 L286.1,126.0 L286.5,135.0 L285.5,142.5 L282.3,150.0 L273.8,155.7 L270.2,155.0 L266.4,152.5 L263.2,135.0 L258.5,126.0 L259.4,121.2 L264.9,114.5 L270.6,112.5 Z" class="m-lake"/>
+<path d="M246.2,387.5 L267.4,392.5 L269.5,432.5 L271.7,470.0 L263.2,492.5 L254.7,515.0 L233.5,515.0 L231.3,502.5 L231.3,467.5 L233.5,445.0 L244.1,407.5 Z" class="m-lake"/>
+<path d="M270.0,155.5 L269.5,182.5 L267.4,207.5 L265.3,257.5 L261.1,307.5 L261.1,357.5 L265.3,387.5 " class="m-river"/>
+<path d="M295.9,20.5 L282.3,45.0 L278.0,65.0 L280.2,95.0 L279.1,110.7 " class="m-river"/>
+<path d="M122.5,330.2 L118.2,250.5 L125.6,207.5 L166.8,164.2 L187.6,186.2 L211.6,157.5 L261.3,133.7 L315.4,51.0 L295.9,20.5 L286.5,126.0 L270.0,154.7 L261.3,133.7 L270.6,112.2 L255.1,206.5 L198.4,388.0 L192.5,406.5 L140.1,408.7 L198.4,388.0 L246.0,397.2 L223.7,503.5 L230.9,467.0 L242.8,364.7 L198.4,388.0 L122.5,330.2 " class="m-route"/>
+<circle cx="122.5" cy="330.2" r="2.8" class="m-dot"/>
+<text x="130.5" y="334.2" text-anchor="start" class="m-lab">Ben Gurion Airport</text>
+<circle cx="118.2" cy="250.5" r="5.5" class="m-base"/><circle cx="118.2" cy="250.5" r="2.2" class="m-basec"/>
+<text x="127.2" y="254.5" text-anchor="start" class="m-lab m-lab-b">Netanya</text>
+<circle cx="125.6" cy="207.5" r="2.8" class="m-dot"/>
+<text x="133.6" y="211.5" text-anchor="start" class="m-lab">Caesarea</text>
+<circle cx="166.8" cy="164.2" r="2.8" class="m-dot"/>
+<text x="159.8" y="176.2" text-anchor="end" class="m-lab">Mt. Carmel</text>
+<circle cx="187.6" cy="186.2" r="2.8" class="m-dot"/>
+<text x="194.6" y="190.2" text-anchor="start" class="m-lab">Megiddo</text>
+<circle cx="211.6" cy="157.5" r="2.8" class="m-dot"/>
+<text x="204.6" y="152.5" text-anchor="end" class="m-lab">Nazareth</text>
+<circle cx="261.3" cy="133.7" r="5.5" class="m-base"/><circle cx="261.3" cy="133.7" r="2.2" class="m-basec"/>
+<text x="252.3" y="137.7" text-anchor="end" class="m-lab m-lab-b">Tiberias</text>
+<circle cx="295.9" cy="20.5" r="2.8" class="m-dot"/>
+<text x="287.9" y="24.5" text-anchor="end" class="m-lab">Caesarea Philippi</text>
+<circle cx="315.4" cy="51.0" r="2.8" class="m-dot"/>
+<text x="322.4" y="55.0" text-anchor="start" class="m-lab">Golan</text>
+<circle cx="255.1" cy="206.5" r="2.8" class="m-dot"/>
+<text x="248.1" y="210.5" text-anchor="end" class="m-lab">Beit She’an</text>
+<circle cx="198.4" cy="388.0" r="5.5" class="m-base"/><circle cx="198.4" cy="388.0" r="2.2" class="m-basec"/>
+<text x="188.4" y="392.0" text-anchor="end" class="m-lab m-lab-b">Jerusalem</text>
+<circle cx="192.5" cy="406.5" r="2.8" class="m-dot"/>
+<text x="192.5" y="425.5" text-anchor="middle" class="m-lab">Bethlehem</text>
+<circle cx="140.1" cy="408.7" r="2.8" class="m-dot"/>
+<text x="133.1" y="401.7" text-anchor="end" class="m-lab">Valley of Elah</text>
+<circle cx="246.0" cy="397.2" r="2.8" class="m-dot"/>
+<text x="253.0" y="395.2" text-anchor="start" class="m-lab">Qumran</text>
+<circle cx="242.8" cy="364.7" r="2.8" class="m-dot"/>
+<text x="249.8" y="361.7" text-anchor="start" class="m-lab">Jericho</text>
+<circle cx="230.9" cy="467.0" r="2.8" class="m-dot"/>
+<text x="223.9" y="471.0" text-anchor="end" class="m-lab">En Gedi</text>
+<circle cx="223.7" cy="503.5" r="2.8" class="m-dot"/>
+<text x="216.7" y="507.5" text-anchor="end" class="m-lab">Masada</text>
+<circle cx="270.6" cy="112.2" r="2.2" class="m-dot"/>
+<circle cx="286.5" cy="126.0" r="2.2" class="m-dot"/>
+<circle cx="270.0" cy="154.7" r="2.2" class="m-dot"/>
+<text x="46.7" y="220.0" text-anchor="middle" class="m-water">Mediterranean</text>
+<text x="46.7" y="237.5" text-anchor="middle" class="m-water">Sea</text>
+<text x="312.0" y="132.5" text-anchor="start" class="m-water m-water-s">Sea of</text>
+<text x="312.0" y="142.5" text-anchor="start" class="m-water m-water-s">Galilee</text>
+<text x="280.2" y="432.5" text-anchor="start" class="m-water m-water-s">Dead</text>
+<text x="280.2" y="442.5" text-anchor="start" class="m-water m-water-s">Sea</text>
+<text x="272.7" y="270.0" text-anchor="start" class="m-water m-water-s">Jordan R.</text>
+<g class="m-scale"><line x1="22" y1="515" x2="94.5" y2="515"/><line x1="22" y1="511" x2="22" y2="519"/><line x1="94.5" y1="511" x2="94.5" y2="519"/><text x="22" y="506" class="m-small">20 miles</text></g>
+<g class="m-north"><path d="M346,452 L352,468 L346,464 L340,468 Z" class="m-northp"/><text x="346" y="482" text-anchor="middle" class="m-small">N</text></g>
+<g><circle cx="20" cy="22" r="5" class="m-base"/><circle cx="20" cy="22" r="2" class="m-basec"/><text x="31" y="25" class="m-small">overnight base</text>
+<line x1="14" y1="40" x2="26" y2="40" class="m-route"/><text x="31" y="43" class="m-small">route, drawn straight</text></g>
+<a href="#day2" class="m-badge-a"><g class="m-badge"><rect x="89.6" y="323.7" width="27.8" height="13" rx="6.5"/><text x="103.5" y="333.2" text-anchor="middle">2·10</text></g></a>
+<a href="#day2" class="m-badge-a"><g class="m-badge"><rect x="96.7" y="244.0" width="13.0" height="13" rx="6.5"/><text x="103.2" y="253.5" text-anchor="middle">2</text></g></a>
+<a href="#day3" class="m-badge-a"><g class="m-badge"><rect x="106.1" y="201.0" width="13.0" height="13" rx="6.5"/><text x="112.6" y="210.5" text-anchor="middle">3</text></g></a>
+<a href="#day3" class="m-badge-a"><g class="m-badge"><rect x="172.3" y="156.7" width="13.0" height="13" rx="6.5"/><text x="178.8" y="166.2" text-anchor="middle">3</text></g></a>
+<a href="#day3" class="m-badge-a"><g class="m-badge"><rect x="170.1" y="179.7" width="13.0" height="13" rx="6.5"/><text x="176.6" y="189.2" text-anchor="middle">3</text></g></a>
+<a href="#day3" class="m-badge-a"><g class="m-badge"><rect x="216.1" y="157.0" width="13.0" height="13" rx="6.5"/><text x="222.6" y="166.5" text-anchor="middle">3</text></g></a>
+<a href="#day3" class="m-badge-a"><g class="m-badge"><rect x="237.0" y="142.2" width="22.6" height="13" rx="6.5"/><text x="248.3" y="151.7" text-anchor="middle">3–5</text></g></a>
+<a href="#day4" class="m-badge-a"><g class="m-badge"><rect x="308.9" y="57.5" width="13.0" height="13" rx="6.5"/><text x="315.4" y="67.0" text-anchor="middle">4</text></g></a>
+<a href="#day4" class="m-badge-a"><g class="m-badge"><rect x="302.4" y="15.0" width="13.0" height="13" rx="6.5"/><text x="308.9" y="24.5" text-anchor="middle">4</text></g></a>
+<a href="#day4" class="m-badge-a"><g class="m-badge"><rect x="291.0" y="115.5" width="13.0" height="13" rx="6.5"/><text x="297.5" y="125.0" text-anchor="middle">4</text></g></a>
+<a href="#day4" class="m-badge-a"><g class="m-badge"><rect x="275.5" y="153.2" width="13.0" height="13" rx="6.5"/><text x="282.0" y="162.7" text-anchor="middle">4</text></g></a>
+<a href="#day5" class="m-badge-a"><g class="m-badge"><rect x="253.1" y="97.7" width="13.0" height="13" rx="6.5"/><text x="259.6" y="107.2" text-anchor="middle">5</text></g></a>
+<a href="#day5" class="m-badge-a"><g class="m-badge"><rect x="260.6" y="200.0" width="13.0" height="13" rx="6.5"/><text x="267.1" y="209.5" text-anchor="middle">5</text></g></a>
+<a href="#day5" class="m-badge-a"><g class="m-badge"><rect x="173.1" y="367.5" width="22.6" height="13" rx="6.5"/><text x="184.4" y="377.0" text-anchor="middle">5–9</text></g></a>
+<a href="#day6" class="m-badge-a"><g class="m-badge"><rect x="198.0" y="400.0" width="13.0" height="13" rx="6.5"/><text x="204.5" y="409.5" text-anchor="middle">6</text></g></a>
+<a href="#day6" class="m-badge-a"><g class="m-badge"><rect x="133.6" y="414.2" width="13.0" height="13" rx="6.5"/><text x="140.1" y="423.7" text-anchor="middle">6</text></g></a>
+<a href="#day7" class="m-badge-a"><g class="m-badge"><rect x="239.5" y="403.7" width="13.0" height="13" rx="6.5"/><text x="246.0" y="413.2" text-anchor="middle">7</text></g></a>
+<a href="#day7" class="m-badge-a"><g class="m-badge"><rect x="225.3" y="350.2" width="13.0" height="13" rx="6.5"/><text x="231.8" y="359.7" text-anchor="middle">7</text></g></a>
+<a href="#day7" class="m-badge-a"><g class="m-badge"><rect x="236.4" y="460.5" width="13.0" height="13" rx="6.5"/><text x="242.9" y="470.0" text-anchor="middle">7</text></g></a>
+<a href="#day7" class="m-badge-a"><g class="m-badge"><rect x="229.2" y="497.0" width="13.0" height="13" rx="6.5"/><text x="235.7" y="506.5" text-anchor="middle">7</text></g></a>
+<a href="#maps" class="m-badge-a"><g class="m-badge"><rect x="13.5" y="51.5" width="13.0" height="13" rx="6.5"/><text x="20.0" y="61.0" text-anchor="middle">3</text></g></a><text x="31" y="61" class="m-small">day of the trip (tap to jump)</text>
+</svg></div>
+      <figcaption><strong>Your route.</strong> The blue numbers are the day you reach each place. Tap one to jump to that day. Site positions and water are drawn from real coordinates. The dashed line joins the stops in itinerary order, drawn straight rather than along the roads. Borders are left off on purpose, since several of these places sit in contested territory.</figcaption>
+    </figure>
+
+    <h3>How far apart things are</h3>
+    <table class="dist">
+      <tbody>
+        <tr><td>Nazareth to Capernaum, where he grew up to where he lived</td><td>20 mi</td></tr>
+        <tr><td>Around the Sea of Galilee, end to end</td><td>13 &times; 8 mi</td></tr>
+        <tr><td>Jerusalem to Bethlehem</td><td>5 mi</td></tr>
+        <tr><td>Jerusalem to Jericho, and 3,400 ft down</td><td>14 mi</td></tr>
+        <tr><td>Capernaum to Jerusalem, the pilgrim road</td><td>79 mi</td></tr>
+        <tr><td>Caesarea Philippi to Masada, the whole trip top to bottom</td><td>135 mi</td></tr>
+        <tr><td>The Old City of Jerusalem, wall to wall</td><td>&frac12; mi</td></tr>
+      </tbody>
+    </table>
+    <p class="dist-note">All straight-line. Nazareth to Capernaum is about the distance from Amelia to downtown Cincinnati. The whole trip, north to south, is a little longer than Cincinnati to Columbus. A pilgrim family walking from Galilee up to Jerusalem for Passover, as Jesus's did, spent several days on the road.</p>
+  </section>
+
+  <section class="bg" id="layers">
+    <h2>The layers</h2>
+    <p>Almost every site is a stack. You will hear guides jump between four thousand years in a single sentence, and the eras below are the ones they will be jumping between. The blue line under each era lists the stops on your trip where that layer is visible.</p>
+
+    <ul class="layers">
+      <li><span class="yrs">c. 9000 BC</span><div><p class="era">Neolithic</p><p class="what">The first towns anywhere. A stone tower at Jericho is older than the pyramids by about five thousand years.</p><p class="where">Jericho</p></div></li>
+      <li><span class="yrs">3000&ndash;1200 BC</span><div><p class="era">Canaanite (Bronze Age)</p><p class="what">Walled city-states, and Egyptian armies marching through the Megiddo pass. Abraham belongs to this world.</p><p class="where">Megiddo &middot; Jericho &middot; the tell at Beit She&rsquo;an</p></div></li>
+      <li><span class="yrs">1000&ndash;586 BC</span><div><p class="era">Israelite kingdoms (Iron Age)</p><p class="what">Saul, David and Solomon, then the divided kingdoms and the prophets. It ends when Babylon burns Solomon&rsquo;s Temple.</p><p class="where">City of David &middot; Hezekiah&rsquo;s Tunnel &middot; Elah &middot; Carmel &middot; Megiddo&rsquo;s gates &middot; En Gedi</p></div></li>
+      <li><span class="yrs">586&ndash;332 BC</span><div><p class="era">Exile and return (Persian)</p><p class="what">The exiles come back and build a modest Second Temple in 516 BC. Ezra and Nehemiah.</p><p class="where">Little visible, but it is the platform everything later stands on</p></div></li>
+      <li><span class="yrs">332&ndash;63 BC</span><div><p class="era">Greek and Hasmonean</p><p class="what">Alexander, then his successors. The Maccabean revolt that Hanukkah remembers, a brief Jewish kingdom, and the Qumran community settling in the desert.</p><p class="where">Qumran &middot; Beit She&rsquo;an as Greek Scythopolis &middot; Banias as a shrine to Pan</p></div></li>
+      <li class="now"><span class="yrs">63 BC&ndash;AD 324</span><div><p class="era">Herod and Rome</p><p class="what">The New Testament world. Herod rebuilds everything, Jesus&rsquo;s ministry follows, Rome destroys the Temple in AD 70 and takes Masada in 73. After a second revolt in 135, Hadrian renames Jerusalem and bans Jews from it.</p><p class="where">Caesarea &middot; Masada &middot; Western Wall &middot; Magdala &middot; Capernaum&rsquo;s basalt &middot; Caesarea Philippi &middot; Pool of Siloam &middot; the Gallicantu steps</p></div></li>
+      <li><span class="yrs">324&ndash;638</span><div><p class="era">Byzantine Christian</p><p class="what">Constantine&rsquo;s mother Helena comes in 326 to find the holy sites. Most of the churches you visit were founded in this era, and many of the traditional locations were fixed now.</p><p class="where">Church of the Nativity &middot; the first Holy Sepulchre &middot; Tabgha&rsquo;s mosaic &middot; Capernaum&rsquo;s white synagogue &middot; Kursi</p></div></li>
+      <li><span class="yrs">638&ndash;1099</span><div><p class="era">Early Islamic</p><p class="what">Caliph Umar takes Jerusalem, and the Dome of the Rock is finished in 691. An earthquake in 749 levels much of Galilee and the Jordan Valley.</p><p class="where">Dome of the Rock &middot; Al-Aqsa &middot; Beit She&rsquo;an&rsquo;s fallen columns</p></div></li>
+      <li><span class="yrs">1099&ndash;1291</span><div><p class="era">Crusader</p><p class="what">A Latin kingdom for less than two centuries. Saladin retakes Jerusalem in 1187. Much of what you walk through in the Holy Sepulchre is Crusader work.</p><p class="where">Holy Sepulchre &middot; the Upper Room hall &middot; Caesarea&rsquo;s walls</p></div></li>
+      <li><span class="yrs">1260&ndash;1917</span><div><p class="era">Mamluk and Ottoman</p><p class="what">Four centuries of Ottoman rule. Suleiman the Magnificent builds the Old City walls you see today, between 1537 and 1541.</p><p class="where">Every gate and wall of the Old City</p></div></li>
+      <li><span class="yrs">1917&ndash;today</span><div><p class="era">British Mandate and modern Israel</p><p class="what">Allenby takes Jerusalem in 1917 and wins at Megiddo in 1918. The Dead Sea Scrolls surface in 1947, the year before the state is founded. Israel takes the Old City in 1967.</p><p class="where">Qumran&rsquo;s caves &middot; Magdala, found in 2009 &middot; the City of David, still being dug</p></div></li>
+    </ul>
+
+    <h3>Names you will hear</h3>
+    <div class="people">
+      <div class="person"><h4>Herod the Great</h4><p class="dates">King of Judea, 37&ndash;4 BC</p><p>A brilliant builder and a paranoid ruler who killed his own wife and sons. He was king when Jesus was born. Nearly every monumental ruin on this trip is his.<span class="seen">Caesarea &middot; Masada &middot; the Temple Mount platform &middot; Western Wall</span></p></div>
+      <div class="person"><h4>Herod Antipas</h4><p class="dates">Ruled Galilee, 4 BC&ndash;AD 39</p><p>A son of Herod, and Jesus&rsquo;s own ruler for his whole life and ministry. He beheaded John the Baptist, Jesus called him &ldquo;that fox,&rdquo; and Pilate sent Jesus to him during the trial. He founded Tiberias, where you sleep.<span class="seen">Tiberias &middot; the Galilee</span></p></div>
+      <div class="person"><h4>Philip the Tetrarch</h4><p class="dates">Ruled the northeast, 4 BC&ndash;AD 34</p><p>Another son of Herod, and the gentlest of them. He rebuilt Banias and named it for Caesar and himself, which is why it is Caesarea <em>Philippi</em>, to tell it apart from the coast.<span class="seen">Caesarea Philippi</span></p></div>
+      <div class="person"><h4>Pontius Pilate</h4><p class="dates">Roman prefect, AD 26&ndash;36</p><p>He governed from Caesarea and came up to Jerusalem for the festivals to keep order. That is why he was in the city that Passover.<span class="seen">Caesarea, where the Pilate Stone was found &middot; Jerusalem</span></p></div>
+      <div class="person"><h4>Caiaphas</h4><p class="dates">High priest, AD 18&ndash;36</p><p>He presided over the night hearing. In 1990 a family bone box inscribed with his name turned up in Jerusalem, and it is now in the Israel Museum.<span class="seen">Gallicantu, his traditional house</span></p></div>
+      <div class="person"><h4>Herod Agrippa I</h4><p class="dates">King, AD 41&ndash;44</p><p>Herod&rsquo;s grandson. He executed James, jailed Peter, and died suddenly at Caesarea in Acts 12.<span class="seen">Caesarea&rsquo;s theater</span></p></div>
+      <div class="person"><h4>Josephus</h4><p class="dates">Historian, AD 37&ndash;c. 100</p><p>A Jewish general in the revolt who went over to Rome and wrote its history. Nearly everything known about Masada, Magdala and Herod comes from him, and he mentions both Jesus and James.<span class="seen">Masada &middot; Magdala &middot; Galilee</span></p></div>
+      <div class="person"><h4>Helena and Constantine</h4><p class="dates">4th century</p><p>The first Christian emperor and his mother. Her pilgrimage in 326 fixed many of the sites you will visit, and his builders found the tomb under Hadrian&rsquo;s temple.<span class="seen">Holy Sepulchre &middot; Nativity &middot; Mount of Olives</span></p></div>
+      <div class="person"><h4>Saladin</h4><p class="dates">Retook Jerusalem, 1187</p><p>He won the city from the Crusaders and gave the keys of the Holy Sepulchre to Muslim families, who still open it every morning.<span class="seen">Holy Sepulchre</span></p></div>
+      <div class="person"><h4>Suleiman the Magnificent</h4><p class="dates">Ottoman sultan, 1520&ndash;1566</p><p>He built the Old City walls and gates you walk through. They look ancient, but they are younger than the Reformation.<span class="seen">Jaffa, Damascus and Lions&rsquo; Gates</span></p></div>
+    </div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="day" id="day1">
+    <div class="day-head">
+      <p class="day-num">Day One <span class="date">Monday, 9 November</span></p>
+      <h2>Leaving</h2>
+      <p class="thread">Cincinnati to Newark to Munich to Tel Aviv. Roughly twenty hours of nothing but transit — which is, historically speaking, the shortest pilgrimage to the Holy Land anyone has ever made.</p>
+    </div>
+
+    <article class="stop">
+      <h3>The departure</h3>
+      <p class="locator">CVG &rarr; EWR &rarr; MUC &rarr; TLV</p>
+      <ul class="refs">
+        <li class="key">Psalm 121</li>
+        <li>Psalm 122</li>
+        <li>Genesis 12:1&ndash;4</li>
+      </ul>
+      <p>Psalms 120 through 134 are titled Songs of Ascents. They were sung by pilgrims walking up to Jerusalem for the festivals — actual travel music, for people doing on foot what you are doing at 500 knots. Psalm 121 is the one about the journey itself: <q>I lift up my eyes to the hills.</q> It is a song about being kept while you are in motion and away from home.</p>
+      <p>Read it before you board. Read it again somewhere over the Atlantic. It is the oldest thing anyone has ever said on this trip.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What am I hoping happens to me in the next ten days — and have I actually said it out loud to God yet?</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="day" id="day2">
+    <div class="day-head">
+      <p class="day-num">Day Two <span class="date">Tuesday, 10 November</span></p>
+      <h2>Landfall</h2>
+      <p class="thread">Arrival, a transfer up the coast, and a night in Netanya on the Mediterranean. Nothing is asked of you today except to sleep.</p>
+    </div>
+
+    <article class="stop">
+      <h3>The Sharon Plain</h3>
+      <p class="locator">Mediterranean coast &middot; Netanya <span class="tag tag-trad">orientation</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The coast where Jonah fled from God and where Peter, centuries later, was sent toward the Gentiles. It was also the main road between Egypt and the empires to the north, so almost every army in the Bible came this way.</p>
+      <ul class="refs">
+        <li>Isaiah 35:1&ndash;2</li>
+        <li>Acts 9:32&ndash;43</li>
+        <li>Jonah 1:1&ndash;3</li>
+      </ul>
+      <p>The coastal strip you drive up tonight is the Sharon — the plain Isaiah names alongside Lebanon and Carmel when he wants to say <q>glory.</q> South of you is Joppa, where Jonah bought his ticket in the wrong direction and where Peter, centuries later, stayed in a tanner's house and had the rooftop vision that cracked the early church open to the whole world. Two men at the same port, one running from a Gentile city and one being sent to one.</p>
+      <p>You will land jet-lagged into a modern Israeli resort town with high-rises and a beach promenade. That dissonance is worth noticing rather than resisting. This is a living country, not an exhibit, and the next nine days will keep insisting on it.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Jonah and Peter stood at the same harbor. What direction am I actually facing?</p>
+      </div>
+      <div class="note">
+        <h4>Practical</h4>
+        <p>Sunset in Israel in mid-November is about <strong>4:40pm</strong> — much earlier than you expect. Days are short, which is why mornings start early on this tour.</p>
+        <p>Get outside into daylight as soon as you can today. It is the single most effective thing for the seven-hour time shift.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="day" id="day3">
+    <div class="day-head">
+      <p class="day-num">Day Three <span class="date">Wednesday, 11 November</span></p>
+      <h2>The Coast and the Valley</h2>
+      <p class="thread">Empire in the morning, prophets at midday, and the hometown that tried to throw him off a cliff. You end the day on the Sea of Galilee.</p>
+    </div>
+
+    <article class="stop">
+      <h3>Caesarea Maritima</h3>
+      <p class="locator">Herod's harbor city &middot; Roman provincial capital <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>This is where the gospel first went to a non-Jew, when Peter baptized Cornelius. It was Rome&rsquo;s seat of government in Judea, where Pilate lived, where Paul was tried, and where he sailed from to Rome.</p>
+      <ul class="refs">
+        <li class="key">Acts 10</li>
+        <li>Acts 21:8&ndash;14</li>
+        <li>Acts 25:1&ndash;12</li>
+        <li>Acts 26</li>
+      </ul>
+      <p>Herod the Great built this out of nothing in twelve years — no natural harbor, so he sank hydraulic concrete into the sea to make one, and named the whole thing after Augustus. It became the Roman capital of Judea. Pilate lived here; the one stone inscription bearing his name that has ever been found came out of the theater floor in 1961.</p>
+      <p>But the reason this stop matters devotionally is Cornelius. A Roman centurion in this town sent for Peter, and Peter came, and what happened in that house is the hinge on which the entire Gentile church turns. <q>God has shown me that I should not call any person common or unclean.</q> Paul was later held prisoner here for two years, tried here, and sailed from this harbor to Rome.</p>
+      <p>You are standing in the room where Christianity stopped being a Jewish sect. Every non-Jewish believer for two thousand years — including you — traces back through a decision made in this town.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What boundary am I still treating as God's, when it turns out to be only mine?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Mount Carmel</h3>
+      <p class="locator">Muhraka &middot; overlooking the Jezreel Valley <span class="tag tag-trad">traditional</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The site of Elijah&rsquo;s showdown with the prophets of Baal. It is the Old Testament&rsquo;s great test of whether Israel would worship God alone.</p>
+      <ul class="refs">
+        <li class="key">1 Kings 18:20&ndash;46</li>
+        <li>1 Kings 19:1&ndash;18</li>
+      </ul>
+      <p>Elijah against four hundred and fifty prophets of Baal, and the question he opened with: <q>How long will you go limping between two different opinions?</q> Not <em>choose God</em> — that comes later. First: stop limping. Stop keeping both options warm.</p>
+      <p>Stay for the end of the chapter, which is the part people skip. After the fire falls, Elijah climbs to the top and puts his face between his knees and sends his servant to look at the sea seven times, and the seventh time there is a cloud the size of a man's hand. He had just called down fire in front of a nation, and he still had to pray seven times for rain.</p>
+      <p>The view from here over the Jezreel is one of the great views in Israel. You can see the whole of tomorrow's history at once.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Where am I limping between two opinions — and what would it actually cost to stop?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Megiddo and the Valley of Armageddon</h3>
+      <p class="locator">Tel Megiddo &middot; the Jezreel Valley <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The most fought-over pass in the ancient world and the source of the word Armageddon. Twenty-six cities are stacked in one mound, covering most of biblical history.</p>
+      <ul class="refs">
+        <li class="key">Revelation 16:12&ndash;16</li>
+        <li>2 Kings 23:29&ndash;30</li>
+        <li>Judges 5:19&ndash;21</li>
+        <li>1 Kings 9:15</li>
+      </ul>
+      <p>Har-Megiddo — the mount of Megiddo — is where Revelation gets the word Armageddon. The tell beneath you holds twenty-six layers of civilization: Canaanite, Solomonic, Assyrian, each city built on the rubble of the last. Deborah and Barak fought here. Josiah was killed here. Thutmose III, Napoleon, and Allenby all wanted this pass, because whoever holds it holds the road between Egypt and Mesopotamia.</p>
+      <p>Then you look out from the tell and the valley named for the last battle on earth is, right now, some of the most productive farmland in Israel. Green rectangles, irrigation, tractors. Wheat where the armies gather.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>The place named for the end is, today, quiet and fruitful. What does that do to how I hold the future?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Mount Precipice</h3>
+      <p class="locator">Above Nazareth &middot; overlooking Jezreel and Mount Tabor <span class="tag tag-trad">traditional</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Nazareth tried to throw Jesus off this cliff after his first sermon. It marks his rejection by his own hometown, and it looks out over the valley and hills he grew up with.</p>
+      <ul class="refs">
+        <li class="key">Luke 4:16&ndash;30</li>
+        <li>Isaiah 61:1&ndash;2</li>
+      </ul>
+      <p>He went to synagogue in his hometown, as was his custom, and read from Isaiah — good news to the poor, liberty to the captives, sight to the blind — and then sat down and said <q>Today this Scripture has been fulfilled in your hearing.</q> And they loved it, briefly. Then he kept talking, about a widow in Sidon and a Syrian leper, about God going to outsiders, and they took him to the brow of the hill to throw him down.</p>
+      <p>Look out from the brow. The rounded hill to the east is Mount Tabor, one traditional site of the Transfiguration. Nain, where he raised a widow&rsquo;s son, sits on the Hill of Moreh just to its right. Below you is the whole Jezreel Valley you drove through this morning. A boy growing up in Nazareth could see most of Israel&rsquo;s battle history from his hometown.</p>
+      <p>His first recorded sermon and the first attempt on his life were the same afternoon, in the town he grew up in, in front of people who had known him since he was small.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>They turned not when he claimed too much for himself, but when he said God was generous to outsiders. Which of those would turn me?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Tiberias, where you sleep</h3>
+      <p class="locator">West shore of the Sea of Galilee &middot; Caesar Hotel, two nights <span class="tag tag-dig">the place itself</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>This was the capital of Herod Antipas, who ruled Galilee for Jesus&rsquo;s whole life. Centuries later it became the city where the standard Hebrew text of the Old Testament was fixed.</p>
+      <ul class="refs">
+        <li class="key">John 6:1&ndash;2, 22&ndash;24</li>
+        <li>John 21:1</li>
+        <li>Luke 13:31&ndash;33</li>
+      </ul>
+      <p>Herod Antipas built this town around AD 20 as his new capital and named it for the emperor Tiberius. He built it on top of a graveyard, so observant Jews would not live here at first. The Gospels never record Jesus going in, though Tiberias was a few miles from Capernaum. John is the only Gospel that even names it, and he calls the lake the Sea of Tiberias.</p>
+      <p>Then history turned it around. After Jerusalem fell, Tiberias became one of the great centers of Jewish learning. Much of the Jerusalem Talmud was compiled here. Between roughly the seventh and tenth centuries, the scholars known as the Masoretes worked out the vowel points and accents of the Hebrew Bible here, letter by letter, the work reaching its peak with the Ben Asher family. The standard Hebrew text behind the Old Testament in your ESV was fixed largely in this town, a short walk from your hotel.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>A town founded as a Roman ruler&rsquo;s showpiece became the place the Hebrew Bible was preserved. What in my life is being turned to a use I never planned?</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 4 -->
+  <section class="day" id="day4">
+    <div class="day-head">
+      <p class="day-num">Day Four <span class="date">Thursday, 12 November</span></p>
+      <h2>The Northern Rim</h2>
+      <p class="thread">Up to the edge of the map, to the most pagan place in the region, where he asked the only question that matters. Then back down to the water.</p>
+      <figure class="fig">
+        <div class="fig-frame"><svg class="map" viewBox="0 0 330 370" role="img" aria-labelledby="gm-t"><title id="gm-t">Sea of Galilee: the ministry sites ringed around the shore</title>
+<rect x="0" y="0" width="330" height="370" class="m-land"/>
+<path d="M160.0,69.6 L209.3,94.3 L219.1,158.1 L221.6,210.3 L215.4,253.8 L197.0,297.3 L147.7,330.6 L126.8,326.3 L104.6,311.8 L86.2,210.3 L59.1,158.1 L64.0,130.5 L96.0,91.4 L129.3,79.7 Z" class="m-lake"/>
+<path d="M125.6,329.2 L123.1,398.8 " class="m-river"/>
+<path d="M194.5,0.0 L178.5,69.6 " class="m-river"/>
+<circle cx="81.2" cy="203.0" r="5.5" class="m-base"/><circle cx="81.2" cy="203.0" r="2.2" class="m-basec"/><text x="72.2" y="207.0" text-anchor="end" class="m-lab m-lab-b">Tiberias</text>
+<circle cx="56.6" cy="158.1" r="3" class="m-dot"/><text x="49.6" y="162.1" text-anchor="end" class="m-lab">Magdala</text>
+<circle cx="62.8" cy="129.1" r="2" class="m-dot2"/><text x="56.8" y="133.1" text-anchor="end" class="m-small">Jesus boat</text>
+<circle cx="96.0" cy="89.9" r="3" class="m-dot"/><text x="89.0" y="95.9" text-anchor="end" class="m-lab">Tabgha</text>
+<circle cx="105.9" cy="75.4" r="3" class="m-dot"/><text x="99.9" y="69.4" text-anchor="end" class="m-lab">Mt. of Beatitudes</text>
+<circle cx="129.3" cy="78.3" r="3" class="m-dot"/><text x="134.3" y="71.3" text-anchor="start" class="m-lab">Capernaum</text>
+<circle cx="221.6" cy="158.1" r="3" class="m-dot"/><text x="229.6" y="162.1" text-anchor="start" class="m-lab">Kursi</text>
+<circle cx="125.6" cy="324.8" r="3" class="m-dot"/><text x="133.6" y="328.8" text-anchor="start" class="m-lab">Yardenit</text>
+<text x="147.7" y="195.8" text-anchor="middle" class="m-water">Sea of Galilee</text>
+<text x="147.7" y="219.5" text-anchor="middle" class="m-water m-water-s">700 ft below sea level</text>
+<text x="131.7" y="355.3" class="m-water m-water-s">Jordan R.</text>
+<text x="322" y="16" text-anchor="end" class="m-small">↑ Caesarea Philippi 28 mi</text>
+<text x="322" y="30" text-anchor="end" class="m-small">↗ Golan Heights</text>
+<text x="10" y="362" class="m-small">↙ Nazareth 15 mi from Tiberias</text>
+<text x="322" y="362" text-anchor="end" class="m-small">Beit She’an 14 mi ↓</text>
+<text x="233.9" y="311.8" text-anchor="middle" class="m-small m-it">Decapolis side</text>
+<text x="233.9" y="340.7" text-anchor="middle" class="m-small m-it">(Gentile)</text>
+<g class="m-scale"><line x1="14" y1="20" x2="56.1" y2="20"/><line x1="14" y1="16" x2="14" y2="24"/><line x1="56.1" y1="16" x2="56.1" y2="24"/><text x="14" y="36" class="m-small">2 miles</text></g>
+<a href="#day3" class="m-badge-a"><g class="m-badge"><rect x="84.9" y="196.5" width="22.6" height="13" rx="6.5"/><text x="96.2" y="206.0" text-anchor="middle">3–5</text></g></a>
+<a href="#day4" class="m-badge-a"><g class="m-badge"><rect x="62.1" y="151.6" width="13.0" height="13" rx="6.5"/><text x="68.6" y="161.1" text-anchor="middle">4</text></g></a>
+<a href="#day5" class="m-badge-a"><g class="m-badge"><rect x="99.5" y="91.4" width="13.0" height="13" rx="6.5"/><text x="106.0" y="100.9" text-anchor="middle">5</text></g></a>
+<a href="#day5" class="m-badge-a"><g class="m-badge"><rect x="107.4" y="56.9" width="13.0" height="13" rx="6.5"/><text x="113.9" y="66.4" text-anchor="middle">5</text></g></a>
+<a href="#day5" class="m-badge-a"><g class="m-badge"><rect x="131.8" y="83.8" width="13.0" height="13" rx="6.5"/><text x="138.3" y="93.3" text-anchor="middle">5</text></g></a>
+<a href="#day4" class="m-badge-a"><g class="m-badge"><rect x="202.1" y="151.6" width="13.0" height="13" rx="6.5"/><text x="208.6" y="161.1" text-anchor="middle">4</text></g></a>
+<a href="#day4" class="m-badge-a"><g class="m-badge"><rect x="106.1" y="318.3" width="13.0" height="13" rx="6.5"/><text x="112.6" y="327.8" text-anchor="middle">4</text></g></a>
+</svg></div>
+        <figcaption><strong>The lake, for Days Four and Five.</strong> Numbers mark the day you visit each stop. Capernaum, Tabgha and the Mount of Beatitudes are all within about two miles of each other. Most of the Gospels&rsquo; Galilee happens on this short strip of the north shore.</figcaption>
+      </figure>
+    </div>
+
+    <article class="stop">
+      <h3>Magdala</h3>
+      <p class="locator">Western shore of the Sea of Galilee <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Mary Magdalene&rsquo;s hometown. It has one of the very few synagogues ever found from Jesus&rsquo;s lifetime, which makes it one of the likeliest places on earth where he actually taught.</p>
+      <ul class="refs">
+        <li class="key">Luke 8:1&ndash;3</li>
+        <li>John 20:1&ndash;18</li>
+        <li>Mark 1:38&ndash;39</li>
+      </ul>
+      <p>This is the sleeper of your whole itinerary. In 2009 they broke ground for a guesthouse and hit a first-century synagogue — one of only a handful anywhere that predate the destruction of the Temple in AD 70. A second one was found nearby in 2021. Inside was a carved stone block, now called the Magdala Stone, decorated by someone who had evidently seen the Jerusalem Temple with his own eyes.</p>
+      <p>Mark says Jesus went throughout all Galilee preaching in their synagogues. There was one synagogue in Magdala. You are standing in it. This is as close to certainty as this kind of thing gets.</p>
+      <p>And it was Mary's town. Delivered of seven demons, named first in the list of women who bankrolled the ministry out of their own means, present at the cross when most of the men were not, and the first human being to see the risen Christ — sent to tell the apostles before the apostles knew.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>The resurrection was entrusted first to a woman no court of the day would have accepted as a witness. What does that say about who God trusts?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Golan Heights</h3>
+      <p class="locator">Volcanic plateau &middot; biblical Bashan <span class="tag tag-trad">landscape</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Biblical Bashan, the high plateau above Galilee. Its animals turn up in Psalm 22, the psalm Jesus quoted from the cross, and it has been a contested frontier from Bible times to today.</p>
+      <ul class="refs">
+        <li>Psalm 22:12&ndash;13</li>
+        <li>Deuteronomy 3:1&ndash;11</li>
+        <li>Psalm 68:15&ndash;16</li>
+      </ul>
+      <p>Bashan was cattle country — <q>the bulls of Bashan</q> in Psalm 22 are shorthand for something large, well-fed and hostile closing in. That psalm opens with <em>My God, my God, why have you forsaken me</em>, which means the animals of this plateau turn up in the words Jesus spoke from the cross.</p>
+      <p>You will also see, plainly, that this is a modern military frontier: fencing, bunkers, signs you should take literally. The geography that made this a strategic prize three thousand years ago has not changed, and neither has the fact that people are still contesting it.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What do I do with the fact that the Bible's landscape is still a place people are fighting over?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Caesarea Philippi</h3>
+      <p class="locator">Banias &middot; the grotto of Pan, at the foot of Mount Hermon <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The turning point of the Gospels. Peter first confessed Jesus as the Christ here, and Jesus first told them plainly he would die in Jerusalem. From here the story turns south toward the cross.</p>
+      <ul class="refs">
+        <li class="key">Matthew 16:13&ndash;28</li>
+        <li>Mark 8:27&ndash;38</li>
+      </ul>
+      <p>If you only pay close attention at one site this week, make it this one — because here the geography <em>is</em> the sermon.</p>
+      <p>A spring bursts out of a cliff at the base of Hermon, one of the sources of the Jordan. Beside it is a deep cave the ancients believed was a mouth of the underworld, and around it a shrine to Pan, and niches cut into the rock for other gods, and a temple Herod built to the divinity of Augustus. This was the least Jewish, most crowded-with-gods place in the whole region. Devout people did not come here.</p>
+      <p>He brought them here and asked: <q>Who do you say that I am?</q> And when Peter answered, he said on this rock I will build my church, and the gates of hell shall not prevail against it — standing in front of a literal cave people literally called the gate of hell, surrounded by the niches of dead gods.</p>
+      <p>He also, in the same conversation, told them plainly for the first time that he was going to Jerusalem to be killed. The confession and the cross arrive together. Peter tried to separate them and got the sharpest rebuke in the Gospels.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>He asked it here, not in the Temple. What does it mean that the question is best answered standing among other people's gods?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Kursi</h3>
+      <p class="locator">Eastern shore &middot; the Decapolis side <span class="tag tag-trad">traditional</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Where Jesus freed a man possessed by demons, in Gentile country across the lake. The healed man was sent home to tell his own people, which made him one of the first witnesses to non-Jews.</p>
+      <ul class="refs">
+        <li class="key">Mark 5:1&ndash;20</li>
+        <li>Luke 8:26&ndash;39</li>
+      </ul>
+      <p>Gentile territory — which is why there were pigs. The man living among the tombs, uncontainable, cutting himself with stones; and then sitting, clothed, in his right mind. The townspeople's reaction is the strange part: they saw him healed and asked Jesus to leave. A restored man was more disruptive than a possessed one.</p>
+      <p>Then the detail that makes this site worth the stop. The man begged to come along, and Jesus said no — <q>Go home to your friends and tell them how much the Lord has done for you.</q> He is refused the thing he wants most and given a harder assignment: stay where everyone knew what you were.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What has God asked me to do <em>where I already am</em>, rather than somewhere else?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Yardenit</h3>
+      <p class="locator">Where the Jordan leaves the Sea of Galilee <span class="tag tag-trad">modern site</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>A place to remember Jesus&rsquo;s baptism in the Jordan, where the Father called him beloved and his public ministry began. It is the same river Israel crossed into the promised land.</p>
+      <ul class="refs">
+        <li class="key">Matthew 3:13&ndash;17</li>
+        <li>Romans 6:1&ndash;11</li>
+        <li>Joshua 3:14&ndash;17</li>
+      </ul>
+      <p>Be clear-eyed: this is a purpose-built facility, not the historical spot. John baptized far to the south, near Jericho, at what is now Qasr al-Yahud. Yardenit is where the buses can safely stop.</p>
+      <p>It doesn't diminish what happens here, because what happens here isn't archaeology. It is you standing in the Jordan remembering your own baptism. And the thing to sit with is that at his baptism, before a single miracle, before one sermon, before anything that could be called a track record, the voice said <q>This is my beloved Son, with whom I am well pleased.</q></p>
+      <p>The approval came first. The work came after.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Can I hear "beloved" before I have produced anything — or do I still need the résumé first?</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 5 -->
+  <section class="day" id="day5">
+    <div class="day-head">
+      <p class="day-num">Day Five <span class="date">Friday, 13 November</span></p>
+      <h2>The Lake, and the Road South</h2>
+      <p class="thread">The densest day of the trip: the water, his home town, the hillside, a Roman city — and then the long climb up to Jerusalem, arriving as Shabbat begins.</p>
+    </div>
+
+    <article class="stop">
+      <h3>On the water</h3>
+      <p class="locator">Sea of Galilee &middot; 700 feet below sea level <span class="tag tag-dig">the place itself</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Jesus calmed the storm, walked on this water, and called fishermen from their boats here. Most of his public ministry happened on or around this lake.</p>
+      <ul class="refs">
+        <li class="key">Mark 4:35&ndash;41</li>
+        <li>Matthew 14:22&ndash;33</li>
+        <li>Luke 5:1&ndash;11</li>
+      </ul>
+      <p>Thirteen miles by eight, sunk in a basin with the Golan rising to the east, which is exactly why the squalls come down so fast and so hard. Professional fishermen were terrified on this water, and they were terrified for good reason.</p>
+      <p>Most groups cut the engine partway out and sit. Take the silence rather than the photographs. <q>Why are you so afraid? Have you still no faith?</q> is a question he asked on this specific body of water, and this is the only place on earth you will ever be asked it in situ.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What storm am I currently managing entirely on my own competence?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Capernaum</h3>
+      <p class="locator">His own city &middot; north shore <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Jesus&rsquo;s home base during his ministry, and the town with more recorded miracles than any other. Peter lived here, and the synagogue stands on foundations from Jesus&rsquo;s day.</p>
+      <ul class="refs">
+        <li class="key">Mark 1:21&ndash;34</li>
+        <li>Mark 2:1&ndash;12</li>
+        <li>Luke 7:1&ndash;10</li>
+        <li>John 6:22&ndash;59</li>
+        <li>Matthew 11:20&ndash;24</li>
+      </ul>
+      <p>Matthew calls it <q>his own city.</q> He moved here from Nazareth and ran the Galilean ministry out of it. The white limestone synagogue you see is fourth or fifth century, but it sits directly on black basalt foundations from the first — the synagogue the centurion built for them, where he taught the Bread of Life discourse, where the man with the unclean spirit cried out.</p>
+      <p>A few steps away, under a modern church on pillars, is a first-century house that became a gathering place for Christians extraordinarily early, with prayers scratched into its plaster. The tradition that it was Peter's house is old and serious. This is where the roof came off and the paralytic came down.</p>
+      <p>And then the hard part. More happened here than anywhere else, and Jesus pronounced judgment on this town specifically: <q>And you, Capernaum, will you be exalted to heaven? You will be brought down to Hades.</q> It is ruins. Familiarity turned out to be the most dangerous condition of all.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What have I seen so often that I have stopped being astonished by it?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Tabgha</h3>
+      <p class="locator">Loaves and fishes &middot; the Primacy of Peter, on the shore <span class="tag tag-trad">traditional</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The traditional site of the feeding of the five thousand, and of the lakeside breakfast where the risen Jesus restored Peter after his three denials.</p>
+      <ul class="refs">
+        <li class="key">John 21:1&ndash;19</li>
+        <li>Mark 6:30&ndash;44</li>
+      </ul>
+      <p>Two churches, a few hundred yards apart. In the first, a fifth-century mosaic of a basket of loaves between two fish, worn smooth by sixteen centuries of feet. In the second, a flat rock at the waterline and the quietest scene in the Gospels.</p>
+      <p>Peter had denied him three times beside a charcoal fire. Here, after the resurrection, there is another charcoal fire — John uses the same rare word, and he uses it on purpose — and breakfast, and three questions. <q>Simon, son of John, do you love me?</q> Three denials, three askings, three commissions. Jesus does not mention the betrayal. He just rebuilds the man, one question at a time, over breakfast.</p>
+      <p>This is a good place to stop walking for a few minutes.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Where do I need restoration more than I need forgiveness — and would I recognize the difference?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Mount of Beatitudes</h3>
+      <p class="locator">Hillside above Tabgha, looking down the lake <span class="tag tag-trad">traditional</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>This hill remembers the Sermon on the Mount, the longest block of Jesus&rsquo;s teaching in the Gospels and the heart of what he taught about how to live.</p>
+      <ul class="refs">
+        <li class="key">Matthew 5:1&ndash;16</li>
+        <li>Matthew 5&ndash;7 entire</li>
+        <li>Luke 6:17&ndash;26</li>
+      </ul>
+      <p>The exact hillside isn't certain; the acoustics of this slope down to the water are famous, and a voice carries remarkably far. Read the Beatitudes here, out loud if you can manage it without self-consciousness.</p>
+      <p>What tends to land, sitting on this grass, is how small and green and ordinary it is. No amphitheater, no platform. A hill with wildflowers above a lake, and the most consequential nine sentences ever spoken about how to be a human being.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Which beatitude do I least want to be true?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Beit She'an</h3>
+      <p class="locator">Scythopolis &middot; Decapolis city, Jordan Valley <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The Philistines hung King Saul&rsquo;s body on its walls, ending Israel&rsquo;s first monarchy. Later it was a grand Roman city, and it shows how close the Greek and Roman world was to Jesus&rsquo;s Galilee.</p>
+      <ul class="refs">
+        <li class="key">1 Samuel 31</li>
+        <li>2 Samuel 1:17&ndash;27</li>
+      </ul>
+      <p>People come here for the Bible and leave talking about the Romans. This is one of the best-preserved Roman and Byzantine cities in the country — a colonnaded main street, a theater that still seats a few thousand, bathhouses, public latrines, the whole apparatus of Greco-Roman urban life, twenty miles from Nazareth. It is the correction to any assumption that Jesus grew up in cultural isolation.</p>
+      <p>Look at the columns lying in rows along the street. They are not a reconstruction. They fell that way in the earthquake of January 749, all in the same direction, and no one ever set them back up.</p>
+      <p>Underneath all of it is the tell where the Philistines hung the bodies of Saul and his sons on the wall. And then the men of Jabesh-Gilead — whom Saul had rescued at the very beginning of his reign, forty years earlier — marched all night, took the bodies down, and carried them home to bury. They did that for a king who had ended badly, who had lost God's favor, who could do nothing for them. They remembered anyway.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Who has ended badly, that I still owe the loyalty of remembering well?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Going up to Jerusalem</h3>
+      <p class="locator">Jordan Valley &rarr; the Judean hills <span class="tag tag-trad">the ascent</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>This is the pilgrim road of the Songs of Ascents. Jesus climbed it for the festivals all his life, and for the last time in the week before he died.</p>
+      <ul class="refs">
+        <li class="key">Psalm 122</li>
+        <li>Psalms 120&ndash;134</li>
+        <li>Luke 2:41&ndash;42</li>
+      </ul>
+      <p>In Hebrew you never travel <em>to</em> Jerusalem. You go <em>up</em> — and on this road it is literal, from below sea level in the valley to twenty-five hundred feet in the hills. Every pilgrim in the Bible made this climb, several times a year, on foot, singing.</p>
+      <p>Read Psalm 122 on the bus as the hills start. <q>I was glad when they said to me, Let us go to the house of the LORD.</q> You have been travelling for five days to say that sentence in the right place.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What am I actually going up to Jerusalem hoping to find?</p>
+      </div>
+      <div class="note">
+        <h4>Shabbat begins tonight</h4>
+        <p>You arrive Friday, and <strong>Shabbat begins at sundown</strong>, about 4:40pm. Jerusalem lights candles forty minutes before sunset rather than the usual eighteen, so the city starts shutting down around 4pm. Jerusalem changes character completely: traffic thins, shops shutter, sirens sound at candle-lighting, and much of the city goes quiet until Saturday night.</p>
+        <p>If the schedule allows it, <strong>ask your guide about getting to the Western Wall this evening.</strong> Kabbalat Shabbat at the Kotel — crowds singing, circles of students dancing, families arriving — is one of the most extraordinary hours available to a visitor in this city, and it will not repeat during your stay. Your hotel is in East Jerusalem, so take a taxi rather than walking after dark.</p>
+        <p>Note also that Israeli hotel elevators often run in Shabbat mode from Friday evening, stopping automatically at every floor. This is not a malfunction.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 6 -->
+  <section class="day" id="day6">
+    <div class="day-head">
+      <p class="day-num">Day Six <span class="date">Saturday, 14 November</span></p>
+      <h2>Olives and Bethlehem</h2>
+      <p class="thread">Shabbat in Jerusalem, so the day runs to Christian and Palestinian sites: the hill he wept from, the garden he sweated in, and the town he was born in.</p>
+    </div>
+
+    <article class="stop">
+      <h3>The Mount of Olives</h3>
+      <p class="locator">East of the Old City, across the Kidron <span class="tag tag-dig">the place itself</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Jesus wept over Jerusalem here, taught about the end of the age here, and ascended from here. The prophet Zechariah says the Lord will stand on this mountain at the end.</p>
+      <ul class="refs">
+        <li class="key">Luke 19:37&ndash;44</li>
+        <li>Acts 1:6&ndash;12</li>
+        <li>Matthew 24:1&ndash;14</li>
+        <li>Zechariah 14:3&ndash;5</li>
+      </ul>
+      <p>The classic view: the whole Temple Mount laid out across the valley, the Dome of the Rock gold in the morning light, the Old City walls behind it. Below you, a Jewish cemetery of roughly 150,000 graves, laid out facing the Temple Mount, because tradition holds the resurrection begins here.</p>
+      <p>He came over this ridge on a donkey while people shouted, and Luke records that at the exact summit of the acclaim — as he came near and saw the city — he wept over it. Not later, in private. Right then, at the top of the best day of his public life, looking at exactly the view you are looking at.</p>
+      <p>He also ascended from here, and Zechariah says his feet will stand on this mountain. A great deal of Christian hope is anchored to this specific hillside.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What does he see when he looks at the thing I am currently celebrating?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Garden of Gethsemane</h3>
+      <p class="locator">Foot of the Mount of Olives &middot; Kidron valley floor <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Where Jesus prayed &ldquo;not my will, but yours&rdquo; and was arrested. It is the place he accepted the cross.</p>
+      <ul class="refs">
+        <li class="key">Luke 22:39&ndash;46</li>
+        <li>Matthew 26:36&ndash;56</li>
+        <li>Hebrews 5:7&ndash;9</li>
+      </ul>
+      <p>Gethsemane means oil press — a garden with equipment for crushing olives, which is not a symbolism anyone had to invent afterward. Some of the trees here have root systems many centuries old; olives regenerate from the root, so these may well descend from trees that stood here that night.</p>
+      <p>Understand what actually happened in this garden. The cross was not decided at the trial or on Golgotha. It was decided here, in the dark, sweating, alone, with his closest friends asleep a few yards away, asking three times for another way and being told no. <q>Not my will, but yours, be done.</q> Everything after this is execution of a decision already made on this ground.</p>
+      <p>The church built over the rock is deliberately kept dim, with violet windows. Sit in it for a while rather than photographing it.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What am I asking God to remove, that he may instead be asking me to carry?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Bethlehem &middot; Church of the Nativity</h3>
+      <p class="locator">West Bank &middot; six miles south of Jerusalem <span class="tag tag-trad">traditional, very early</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The traditional birthplace of Jesus, honored as such since the second century. It is the oldest church in the world still in continuous use.</p>
+      <ul class="refs">
+        <li class="key">Luke 2:1&ndash;20</li>
+        <li>Micah 5:2&ndash;5</li>
+        <li>Matthew 2:1&ndash;18</li>
+      </ul>
+      <p>The oldest continuously operating church in the world. Justinian's basilica from the sixth century, standing on Constantine's from the fourth, over a grotto that Christians were already identifying as the birthplace by around AD 150 — within living memory of people who would have known.</p>
+      <p>You enter through the Door of Humility, an opening barely four feet high, cut down over the centuries partly to stop looters riding horses inside. Whatever the original reason, the effect is exact: nobody enters this church standing upright. Everyone stoops.</p>
+      <p>Note where you are, too. Bethlehem is a Palestinian city; you cross a checkpoint to reach it. Its historically Christian population has fallen sharply over the last century. The people selling you olive-wood carvings are, many of them, from families who have been Christians here since before England was.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What am I going to have to stoop to get through?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Shepherds' Fields</h3>
+      <p class="locator">Beit Sahour, east of Bethlehem <span class="tag tag-trad">traditional</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The angels announced the birth to shepherds here. These fields around Bethlehem are also where Ruth gleaned and where David kept his father&rsquo;s sheep.</p>
+      <ul class="refs">
+        <li class="key">Luke 2:8&ndash;20</li>
+        <li>Ruth 2</li>
+        <li>1 Samuel 16:1&ndash;13</li>
+      </ul>
+      <p>These same fields are where Ruth gleaned behind Boaz's harvesters — David's great-grandmother, a Moabite widow, working for scraps in the town her descendant would be born in. And where David was keeping the sheep when Samuel arrived looking for a king and nobody thought to call him in from the field.</p>
+      <p>Then the announcement. Shepherds worked the night shift, lived outdoors with animals, were ritually unclean much of the time, and were considered unreliable witnesses in legal proceedings. That is who got told. God's announcement of the incarnation went to the one category of people whose testimony a court would have thrown out.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Who would I not have thought to tell?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Valley of Elah</h3>
+      <p class="locator">Shephelah &middot; between Socoh and Azekah <span class="tag tag-dig">the place itself</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Where David killed Goliath. It is one of the easiest Bible battlefields to picture, because the landscape has barely changed.</p>
+      <ul class="refs">
+        <li class="key">1 Samuel 17</li>
+      </ul>
+      <p>One of the most legible battlefields in the Bible. Philistines on one ridge, Israelites on the other, the valley floor between them, and the brook running through the middle. You can stand where the armies faced off and see the entire tactical situation at a glance — and you can pick five smooth stones out of that brook, which is exactly what a great many pilgrims do.</p>
+      <p>The detail worth carrying is not the sling. It is that Saul dressed David in his own armor first, and David walked a few steps and took it off, because he had not tested it. He went down to the brook as himself.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Whose armor am I currently trying to fight in?</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 7 -->
+  <section class="day" id="day7">
+    <div class="day-head">
+      <p class="day-num">Day Seven <span class="date">Sunday, 15 November</span></p>
+      <h2>Down to the Dead Sea</h2>
+      <p class="thread">The longest descent on earth, from the hills to the lowest point on the planet. Wilderness, scrolls, a fortress, an oasis, and one of the oldest towns on earth.</p>
+      <figure class="fig">
+        <div class="fig-frame"><svg class="chart" viewBox="0 0 340 230" role="img" aria-labelledby="ep-t"><title id="ep-t">Road elevation from Jerusalem down to the Dead Sea: about 4,000 feet of descent in 22 miles</title>
+<line x1="46" x2="326" y1="160.4" y2="160.4" class="c-grid"/>
+<text x="40" y="163.4" text-anchor="end" class="c-ax">-1,000 ft</text>
+<line x1="46" x2="326" y1="124.8" y2="124.8" class="c-zero"/>
+<text x="40" y="127.8" text-anchor="end" class="c-ax">0 ft</text>
+<line x1="46" x2="326" y1="89.2" y2="89.2" class="c-grid"/>
+<text x="40" y="92.2" text-anchor="end" class="c-ax">1,000 ft</text>
+<line x1="46" x2="326" y1="53.6" y2="53.6" class="c-grid"/>
+<text x="40" y="56.6" text-anchor="end" class="c-ax">2,000 ft</text>
+<line x1="46" x2="326" y1="18.0" y2="18.0" class="c-grid"/>
+<text x="40" y="21.0" text-anchor="end" class="c-ax">3,000 ft</text>
+<text x="46.0" y="211" text-anchor="middle" class="c-ax">0</text>
+<text x="109.6" y="211" text-anchor="middle" class="c-ax">5</text>
+<text x="173.3" y="211" text-anchor="middle" class="c-ax">10</text>
+<text x="236.9" y="211" text-anchor="middle" class="c-ax">15</text>
+<text x="300.5" y="211" text-anchor="middle" class="c-ax">20</text>
+<text x="186.0" y="226" text-anchor="middle" class="c-ax">miles along the road</text>
+<path d="M46.0,33.7 L84.2,42.9 L109.6,64.3 L154.2,92.8 L198.7,117.7 L211.5,124.8 L243.3,140.8 L287.8,155.1 L326.0,176.1 L326.0,196.0 L46.0,196.0 Z" class="c-area"/>
+<path d="M46.0,33.7 L84.2,42.9 L109.6,64.3 L154.2,92.8 L198.7,117.7 L211.5,124.8 L243.3,140.8 L287.8,155.1 L326.0,176.1" class="c-line"/>
+<line x1="46" x2="326" y1="149.7" y2="149.7" class="c-ref"/>
+<text x="50" y="145.7" text-anchor="start" class="c-ax c-refl">Sea of Galilee, for comparison</text>
+<text x="216.5" y="119.8" class="c-ax">sea-level marker</text>
+<circle cx="46.0" cy="33.7" r="3.5" class="c-pt"/>
+<text x="53.0" y="27.7" text-anchor="start" class="c-lab">Jerusalem <tspan class="c-ax">2,560 ft</tspan></text>
+<circle cx="287.8" cy="155.1" r="3.5" class="c-pt"/>
+<text x="280.8" y="169.1" text-anchor="end" class="c-lab">Jericho <tspan class="c-ax">-850 ft</tspan></text>
+<circle cx="326.0" cy="176.1" r="3.5" class="c-pt"/>
+<text x="319.0" y="190.1" text-anchor="end" class="c-lab">Dead Sea <tspan class="c-ax">-1,440 ft</tspan></text>
+</svg></div>
+        <figcaption><strong>&ldquo;Going down from Jerusalem to Jericho.&rdquo;</strong> Approximate profile of the road east. The drop is about 4,000 feet in 22 miles, and the Dead Sea itself falls about three feet further every year.</figcaption>
+      </figure>
+    </div>
+
+    <article class="stop">
+      <h3>The Judean Wilderness</h3>
+      <p class="locator">Jerusalem &rarr; the Dead Sea &middot; 2,500 ft above to 1,400 ft below <span class="tag tag-dig">the place itself</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The desert of Jesus&rsquo;s forty days, John the Baptist&rsquo;s preaching, and David&rsquo;s years on the run. It is the landscape behind Psalm 23 and the parable of the Good Samaritan.</p>
+      <ul class="refs">
+        <li class="key">Psalm 23</li>
+        <li>Matthew 4:1&ndash;11</li>
+        <li>Luke 10:25&ndash;37</li>
+        <li>Hosea 2:14&ndash;15</li>
+      </ul>
+      <p>Watch the window on the way down. In under twenty miles you drop nearly four thousand feet and the world turns to bare chalk hills, wadis, and nothing. <q>A man was going down from Jerusalem to Jericho</q> — <em>down</em> is not a figure of speech, and once you have seen this road, the Samaritan story is a different story.</p>
+      <p>Read Psalm 23 here rather than anywhere else. Green pastures and still water are not pastoral decoration in this landscape; they are survival, and they are rare, and a shepherd who finds them has done something. The valley of the shadow of death is the wadi you are currently driving through.</p>
+      <p>This is also where he spent forty days, and where John preached, and where the scapegoat was driven on the Day of Atonement. Scripture keeps sending people out here on purpose.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What has the wilderness actually been for, in my life — and did I treat it as punishment when it was preparation?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Qumran</h3>
+      <p class="locator">Northwest shore of the Dead Sea <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The Dead Sea Scrolls were found in these caves, including the oldest known copies of books of the Hebrew Bible. They showed how faithfully scripture had been copied over a thousand years.</p>
+      <ul class="refs">
+        <li>Isaiah 40:1&ndash;8</li>
+        <li>2 Timothy 3:14&ndash;17</li>
+      </ul>
+      <p>A separatist community lived out here copying scripture for roughly two centuries, and when the Romans came in AD 68 they hid their library in jars in the cliffs. A Bedouin boy found the first cave in 1947.</p>
+      <p>Among them was a complete scroll of Isaiah, a thousand years older than any Hebrew manuscript previously known — and substantially, unremarkably, the same text. That single result is one of the great quiet moments in the history of biblical scholarship.</p>
+      <p>Stand and look at the caves. Men you will never know the names of sat in this heat with reed pens, copying a text letter by letter, for readers who would not exist for two thousand years. You own a Bible partly because somebody put one in a jar.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What am I building or preserving for people I will never meet?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Masada</h3>
+      <p class="locator">Herod's fortress &middot; 1,300 ft above the Dead Sea <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Herod&rsquo;s desert fortress and the last stand of the Jewish revolt against Rome in AD 73. It shows where the violent path ends, the one Jesus refused.</p>
+      <ul class="refs">
+        <li>John 6:14&ndash;15</li>
+        <li>Matthew 26:47&ndash;56</li>
+        <li>John 18:33&ndash;37</li>
+      </ul>
+      <p>Herod built a palace on a plateau in the desert with cisterns, storerooms, a bathhouse, and a villa hanging off the northern cliff in three tiers. About seventy-five years after his death, Jewish rebels held it against Rome, and the Tenth Legion built a siege ramp that is still there, still visible, still the most eloquent object on the site. Josephus says that when the wall was breached in the spring of AD 73, the defenders &mdash; 960 of them, by his count &mdash; were already dead by their own hand. He is the only source, and archaeologists have never found physical evidence of a mass suicide, so some scholars think the end was messier than he tells it.</p>
+      <p>No Gospel event happened here. It matters anyway, because it shows you the road not taken. The zealot option was live and attractive in Jesus' lifetime — a crowd tried to make him king by force, Peter drew a sword in the garden, and he refused both times. <q>My kingdom is not of this world.</q> Masada is where that other path ends.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What does it cost to refuse the sword when the sword is right there and the cause is just?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>En Gedi</h3>
+      <p class="locator">Oasis and waterfall in the Dead Sea cliffs <span class="tag tag-dig">the place itself</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>David spared King Saul&rsquo;s life in a cave here, when he could have killed him, and wrote Psalm 57 while hiding. It is a real oasis in the middle of the desert.</p>
+      <ul class="refs">
+        <li class="key">1 Samuel 24</li>
+        <li>Psalm 57</li>
+        <li>Song of Songs 1:14</li>
+      </ul>
+      <p>Freshwater falling through a slot in absolute desert, with ibex on the rocks. After hours in the wilderness it is almost shocking, which is the point of every oasis image in scripture.</p>
+      <p>David hid in these caves while Saul hunted him, and in one of them Saul came in alone and David had him — had the man who had thrown spears at him, had the throne already promised to him, had every argument on his side. And he cut the corner off Saul's robe instead, and then his conscience troubled him even for that.</p>
+      <p>Psalm 57 is headed &ldquo;when he fled from Saul, in the cave.&rdquo; Which cave it means is not recorded, and tradition has attached it both to En Gedi and to Adullam &mdash; but there is no better place to read it than this one.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What could I do to someone right now, with the power and arguably the right — that I should not do?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>Jericho and the Mount of Temptation</h3>
+      <p class="locator">Tell es-Sultan &middot; among the oldest towns on earth <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Among the oldest inhabited places on earth, and the first city Israel took in the promised land. On his last trip to Jerusalem, Jesus healed blind Bartimaeus and ate with Zacchaeus here.</p>
+      <ul class="refs">
+        <li class="key">Luke 19:1&ndash;10</li>
+        <li>Mark 10:46&ndash;52</li>
+        <li>Joshua 6</li>
+        <li>Matthew 4:1&ndash;11</li>
+      </ul>
+      <p>Eleven thousand years of settlement, with more than twenty towns built one on top of another. Its Neolithic stone tower, carbon-dated to about 8300 BC, predates the pyramids by well over five thousand years. Joshua's walls, Rahab, Elisha's spring, Herod's winter palace. Above the town, a monastery clings improbably to the cliff face at the traditional site of the temptation.</p>
+      <p>But the scene to sit with is Zacchaeus. A collaborator, hated, rich on his neighbors' money, too short to see, undignified enough to climb a tree. Jesus stops under it, calls him by name, and invites himself to lunch. The last thing he does before going up to Jerusalem to die is eat in the house of the most despised man in town.</p>
+      <p>Also here: blind Bartimaeus, shouting over a crowd that told him to be quiet, and the question Jesus asked him — <q>What do you want me to do for you?</q></p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Who is up the tree — visible, ridiculous, hoping — that I have walked straight past?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Dead Sea</h3>
+      <p class="locator">Lowest point on the surface of the earth <span class="tag tag-dig">the place itself</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The lowest place on earth and the setting of Sodom and Gomorrah. The prophet Ezekiel pictured this lifeless sea made fresh by a river flowing from God&rsquo;s temple.</p>
+      <ul class="refs">
+        <li class="key">Ezekiel 47:1&ndash;12</li>
+        <li>Genesis 19:23&ndash;29</li>
+      </ul>
+      <p>Ten times saltier than the ocean. Nothing lives in it. You will float absurdly, take the obligatory photograph, and discover that the water stings anywhere you have shaved.</p>
+      <p>Before you get in, read Ezekiel 47: the prophet's vision of a river running east from the Temple, getting deeper as it goes, and where it empties into this sea <q>the water will become fresh.</q> Fish in it. Trees on both banks, fruit every month, leaves for healing. Written by a man in exile about the deadest water on earth.</p>
+      <p>Floating in it while holding that image is one of the better juxtapositions available to a traveler anywhere.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What part of me have I written off as too salted to live — and what would it mean for the river to reach it?</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 8 -->
+  <section class="day" id="day8">
+    <div class="day-head">
+      <p class="day-num">Day Eight <span class="date">Monday, 16 November</span></p>
+      <h2>Inside the Walls</h2>
+      <p class="thread">The most contested ground on earth, a retaining wall people have wept at for centuries, a route through a working bazaar, and a church six denominations cannot agree about.</p>
+      <figure class="fig">
+        <div class="fig-frame"><svg class="map" viewBox="0 0 360 410" role="img" aria-labelledby="oc-t"><title id="oc-t">Schematic of Jerusalem's Old City and its surroundings: the four quarters, the Temple Mount, the Via Dolorosa, the Kidron and Hinnom valleys, the Mount of Olives, Mount Zion, and the City of David</title>
+<rect x="0" y="0" width="360" height="410" class="m-land"/>
+<path d="M58,120 C52,190 60,250 90,300 C130,360 200,385 262,392" class="oc-valley"/>
+<path d="M292,40 C288,120 286,200 282,280 C278,330 270,370 262,392" class="oc-valley"/>
+<text x="46" y="210" class="m-small m-it" transform="rotate(-80 46 210)">Hinnom Valley</text>
+<text x="302" y="262" class="m-small m-it" transform="rotate(-86 302 262)">Kidron Valley</text>
+<path d="M300,60 L360,60 L360,300 L304,300 C306,200 302,120 300,60 Z" class="oc-olives"/>
+<text x="352" y="80" text-anchor="end" class="m-lab m-lab-b">Mount</text>
+<text x="352" y="94" text-anchor="end" class="m-lab m-lab-b">of Olives</text>
+<circle cx="296" cy="168" r="3.2" class="m-dot"/>
+<text x="352" y="171" text-anchor="end" class="m-lab">Gethsemane</text>
+<line x1="300" y1="168" x2="298" y2="168" class="oc-lead"/>
+<path d="M80,92 L250,80 L262,170 L262,250 L205,254 L80,258 L74,166 Z" class="oc-city"/>
+<path d="M186,140 L260,140 L262,250 L190,252 Z" class="oc-tm"/>
+<circle cx="224" cy="190" r="9" class="oc-dome"/>
+<text x="224" y="218" text-anchor="middle" class="m-small">Temple Mount</text>
+<text x="224" y="229" text-anchor="middle" class="m-small m-it">Dome of the Rock</text>
+<line x1="186" y1="212" x2="188" y2="246" class="oc-kotel"/>
+<text x="180" y="205" text-anchor="end" class="m-lab">Western Wall</text>
+<text x="118" y="120" text-anchor="middle" class="oc-q">CHRISTIAN</text>
+<text x="208" y="108" text-anchor="middle" class="oc-q">MUSLIM</text>
+<text x="102" y="226" text-anchor="middle" class="oc-q">ARMENIAN</text>
+<text x="152" y="241" text-anchor="middle" class="oc-q">JEWISH</text>
+<path d="M254,134 C236,130 214,128 196,130 C178,132 164,140 150,146 C142,150 136,152 130,154" class="oc-via"/>
+<text x="210" y="124" text-anchor="middle" class="m-small oc-vial">Via Dolorosa</text>
+<circle cx="128" cy="155" r="4" class="m-dot"/>
+<text x="122" y="170" text-anchor="middle" class="m-lab">Holy Sepulchre</text>
+<rect x="161" y="82" width="10" height="7" class="oc-gate"/><text x="166" y="76" text-anchor="middle" class="m-small">Damascus Gate</text>
+<rect x="255" y="126" width="8" height="10" class="oc-gate"/>
+<text x="268" y="120" class="m-small">Lions&#8217; Gate</text>
+<rect x="70" y="160" width="8" height="10" class="oc-gate"/>
+<text x="84" y="192" class="m-small">Jaffa Gate</text>
+<rect x="115" y="251" width="10" height="8" class="oc-gate"/>
+<text x="120" y="272" text-anchor="middle" class="m-small">Zion Gate</text>
+<rect x="199" y="248" width="10" height="8" class="oc-gate"/>
+
+<path d="M214,262 L248,258 L240,344 L222,348 Z" class="oc-cod"/>
+<text x="208" y="270" text-anchor="end" class="m-small">Dung Gate</text>
+
+<text x="252" y="304" text-anchor="start" class="m-lab">City of David</text>
+
+<circle cx="230" cy="352" r="3.2" class="m-dot"/>
+<text x="222" y="370" text-anchor="end" class="m-lab">Pool of Siloam</text>
+<circle cx="112" cy="286" r="3.2" class="m-dot"/>
+<text x="104" y="290" text-anchor="end" class="m-lab">Upper Room</text>
+<text x="112" y="310" text-anchor="middle" class="m-small m-it">Mount Zion</text>
+<circle cx="170" cy="306" r="3.2" class="m-dot"/>
+<text x="170" y="324" text-anchor="middle" class="m-lab">Gallicantu</text>
+<circle cx="168" cy="48" r="3.5" class="m-dot"/>
+<text x="176" y="51" class="m-lab">Garden Tomb</text>
+<text x="168" y="18" text-anchor="middle" class="m-small">&#8593; Ambassador Hotel, under a mile</text>
+<text x="10" y="402" class="m-small m-it">Schematic, not to scale. The Old City is about half a mile across.</text>
+</svg>
+</div>
+        <figcaption><strong>The Old City and around, for Days Six, Eight and Nine.</strong> The red dashes are the Via Dolorosa. The City of David, Mount Zion, Gethsemane and the Garden Tomb all sit outside today&rsquo;s walls, and so did Golgotha in the first century. The walls have moved since then, and the church came to sit inside them later.</figcaption>
+      </figure>
+    </div>
+
+    <article class="stop">
+      <h3>The Temple Mount</h3>
+      <p class="locator">Haram esh-Sharif &middot; 35 acres <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>Solomon&rsquo;s Temple and Herod&rsquo;s Temple both stood here, and Jesus taught here during his last week. It is the holiest site in Judaism and one of the holiest in Islam.</p>
+      <ul class="refs">
+        <li class="key">Mark 11:15&ndash;19</li>
+        <li>Mark 12:41&ndash;44</li>
+        <li>Mark 13:1&ndash;2</li>
+        <li>Genesis 22:1&ndash;14</li>
+        <li>John 4:19&ndash;26</li>
+      </ul>
+      <p>Solomon's Temple stood here, then the Second Temple, then Herod's vast expansion of the platform you are walking on. Tradition puts Abraham and Isaac on this rock. Since 691 the Dome of the Rock has stood over it, and since 70 AD there has been no Temple.</p>
+      <p>In his last week Jesus taught here daily. He overturned the tables here. He watched a widow put in two small coins here and said she had given more than everyone. And his disciples said <em>look at these stones</em> and he said not one will be left on another — a statement so implausible, looking at the Herodian ashlars, that it must have sounded insane.</p>
+      <p>Hold alongside all of it what he told a Samaritan woman at a well: the hour is coming when the question of <em>this mountain or that one</em> stops being the question.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What am I holding as the necessary place — the building, the format, the tradition — that God may not be holding at all?</p>
+      </div>
+      <div class="note">
+        <h4>Rules on the Mount</h4>
+        <p>Non-Muslim visitors enter only by the Mughrabi Bridge beside the Western Wall, during limited morning windows, Sunday to Thursday. It is closed to visitors on Fridays, Saturdays and Muslim holidays, and it can shut at short notice on any day; your guide will know how things stand. Your Temple Mount morning is a Monday, normally a visiting day.</p>
+        <p><strong>No religious items, no Bibles, and no visible prayer</strong> — this is enforced, and bags are checked. Dress modestly: shoulders and knees covered, for men as well as women. Non-Muslims may not enter the Dome of the Rock or Al-Aqsa themselves.</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Western Wall</h3>
+      <p class="locator">The Kotel &middot; Herodian retaining wall <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The surviving retaining wall of Herod&rsquo;s Temple platform. It is the closest point to where the Temple stood at which Jews can pray today.</p>
+      <ul class="refs">
+        <li class="key">1 Kings 8:22&ndash;43</li>
+        <li>Psalm 137</li>
+        <li>Lamentations 1:1&ndash;5</li>
+      </ul>
+      <p>It is worth being precise about what this is: not the Temple, but a section of the retaining wall Herod built to hold up the platform. It is venerated because it is the closest surviving structure to where the Holy of Holies stood.</p>
+      <p>Solomon prayed at the dedication that when people turned toward this house from anywhere, God would hear. Two and a half thousand years later, people are still turning toward it — and pushing folded paper into the cracks, which you are entirely welcome to do. Men and women approach separate sections; men cover their heads, and paper kippot are provided.</p>
+      <p>Whatever your theology of the place, watching people pray with that much conviction at a wall holding up an absence is a lesson in persistence.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What am I going to write on that piece of paper — and why haven't I said it out loud?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Via Dolorosa</h3>
+      <p class="locator">Muslim Quarter &rarr; Christian Quarter &middot; fourteen stations <span class="tag tag-trad">devotional route</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The traditional route of Jesus carrying the cross to his crucifixion. Pilgrims have walked it in prayer for centuries.</p>
+      <ul class="refs">
+        <li class="key">Luke 23:26&ndash;43</li>
+        <li>John 19:16&ndash;22</li>
+        <li>Mark 15:16&ndash;32</li>
+      </ul>
+      <p>Be straightforward about this one: the route is medieval, fixed by Franciscans centuries later, and several stations commemorate events that are traditional rather than scriptural. The street level of the first century is many feet below where you are walking.</p>
+      <p>And it is still worth doing, for a reason that surprises most people. You expect solemnity and you get a working bazaar — vendors, handcarts, schoolchildren, shopkeepers on phones, a man selling bread who wants you to move. It is loud and commercial and entirely indifferent.</p>
+      <p>Which is precisely what it was like. It was an ordinary Friday. Jerusalem was crowded for Passover, business was brisk, and for almost everyone in this city that day, nothing whatsoever happened. The indifference is not a failure of the site. It is the most historically accurate thing about it.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What was I busy with, the last time something unbearable was happening to someone within a hundred yards of me?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Church of the Holy Sepulchre</h3>
+      <p class="locator">Christian Quarter &middot; Golgotha and the tomb, under one roof <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The most likely place of Jesus&rsquo;s crucifixion, burial and resurrection, and the holiest site in Christianity.</p>
+      <ul class="refs">
+        <li class="key">John 19:38&ndash;42</li>
+        <li>Matthew 27:57&ndash;66</li>
+        <li>Luke 24:1&ndash;12</li>
+      </ul>
+      <p>The historical case here is stronger than most Protestants expect. In the first century this spot was outside the city wall; it was a disused quarry with rock-cut tombs in its face; Hadrian built a pagan temple over it in the 130s, which is itself evidence that Christians were venerating the site early enough to be worth suppressing; and Constantine's people demolished that temple and found a tomb. Most archaeologists, including Protestant ones, take it seriously.</p>
+      <p>What you will experience is chaos. It is dark, thick with incense, loud, and crowded, and it is shared under a fragile arrangement by six denominations who have occasionally come to blows in it. A wooden ladder has sat under a window since the eighteenth century because no one is permitted to move it. A Muslim family has held the key since the twelfth century, because the Christians could not be trusted with it.</p>
+      <p>Somewhere in that is the most honest picture of the church you will ever be handed: divided, stubborn, ancient, quarrelsome, and still — after two thousand years — refusing to leave the tomb.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Can I love a church that looks like this? Because this is what it looks like.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 9 -->
+  <section class="day" id="day9">
+    <div class="day-head">
+      <p class="day-num">Day Nine <span class="date">Tuesday, 17 November</span></p>
+      <h2>Zion, and the Garden</h2>
+      <p class="thread">The upper room, the oldest stones in Jerusalem, and then a quiet garden with a stone tomb, where your group will take communion and where the trip is designed to end.</p>
+    </div>
+
+    <article class="stop">
+      <h3>Mount Zion</h3>
+      <p class="locator">The Cenacle, Gallicantu, and the Dormition <span class="tag tag-trad">traditional</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The traditional site of the Last Supper and of Pentecost, when the church began. Caiaphas&rsquo;s house, where Peter denied Jesus, is on the same hill.</p>
+      <ul class="refs">
+        <li class="key">Luke 22:7&ndash;34</li>
+        <li>Acts 1:12&ndash;14</li>
+        <li>Acts 2:1&ndash;42</li>
+        <li>Luke 22:54&ndash;62</li>
+        <li>Psalm 88</li>
+      </ul>
+      <p>The Upper Room you will stand in is a Crusader-era hall, not a first-century one — but the tradition that the Last Supper and Pentecost happened on this hill is very old. A rented room upstairs is where the church was instituted and where it was ignited, fifty days apart.</p>
+      <p>Then walk down to St. Peter in Gallicantu — <em>the cock's crow</em> — on the traditional site of Caiaphas's house. Beneath the church is a pit cut into bedrock, reachable only by rope, where prisoners were held. If Jesus was held overnight at the high priest's house, he was held in something very like it, and possibly in that one.</p>
+      <p>Psalm 88 is traditionally read in that pit. It is the one psalm of lament that never resolves — no turn, no comfort, ending on the word <em>darkness</em>. Somebody should read it aloud down there.</p>
+      <p>Outside, an ancient stepped street runs down toward the Kidron. Those stairs are first century. If he walked from the upper room to Gethsemane, he walked on those stones.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Peter failed here, at night, in a courtyard, three times — and was still given the church. What do I think my worst night has disqualified me from?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The City of David</h3>
+      <p class="locator">The original Jerusalem &middot; the ridge south of the Temple Mount <span class="tag tag-dig">excavated</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>The original Jerusalem that David captured and made his capital. It holds Hezekiah&rsquo;s Tunnel and the Pool of Siloam, where Jesus healed a man born blind.</p>
+      <ul class="refs">
+        <li class="key">2 Kings 20:20</li>
+        <li>John 9:1&ndash;12</li>
+        <li>2 Samuel 5:6&ndash;10</li>
+        <li>Psalm 46</li>
+      </ul>
+      <p>The first surprise is how small it is. David's Jerusalem was a narrow spur of about eleven acres — you could walk its length in five minutes. Everything in the Old Testament happened in a city smaller than a shopping centre.</p>
+      <p>Hezekiah's Tunnel is the highlight. In 701 BC, with the Assyrian army coming, two crews cut seventeen hundred feet through solid rock from opposite ends and met in the middle. Water still runs through it. If you walk it, you go knee-deep in the dark for half an hour, in a channel cut by frightened men under deadline, and come out at the Pool of Siloam — where the man born blind was sent to wash.</p>
+      <p>And the pilgrimage road from that pool up to the Temple has now been excavated. Those are the actual steps festival pilgrims climbed, singing the psalms you read on the bus coming down from Galilee.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>All of it started this small. What am I despising in my own life for being too small to matter?</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The Garden Tomb</h3>
+      <p class="locator">Outside the Damascus Gate &middot; communion service <span class="tag tag-trad">devotional site</span></p>
+      <p class="why"><span class="why-label">Why it matters</span>A quiet garden with an ancient tomb, where Protestant pilgrims gather to remember the resurrection and take communion together.</p>
+      <ul class="refs">
+        <li class="key">John 20:1&ndash;18</li>
+        <li>Luke 24:1&ndash;12</li>
+        <li>1 Corinthians 11:23&ndash;26</li>
+      </ul>
+      <p>Honesty first, because you would rather have it: this site was identified in the 1880s, the escarpment beside it looks like a skull from certain angles, and the tomb itself is almost certainly several centuries too old to be the <q>new tomb in which no one had yet been laid.</q> The archaeological case belongs to the Holy Sepulchre. The Garden Tomb's own guides will generally tell you so.</p>
+      <p>What it is instead is a quiet green garden with benches, a few hundred yards from the noise, where Protestant groups can do the thing that is impossible in the scrum of the Sepulchre: sit down together, read the resurrection account slowly, and take communion. Your tour saves it for last on purpose. For most groups it is the hour people actually remember.</p>
+      <p>The line to sit with is the one Jesus says to Mary in the garden, before she recognizes him — <q>Whom are you seeking?</q> It is the same question he asked at the very beginning of John's Gospel, of the first two people who ever followed him. The book closes the loop.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Whom am I seeking? Not what — whom. Answer it here, before you fly home.</p>
+      </div>
+    </article>
+
+    <article class="stop">
+      <h3>The farewell dinner</h3>
+      <p class="locator">Jerusalem &middot; last night <span class="tag tag-trad">closing</span></p>
+      <ul class="refs">
+        <li class="key">Luke 24:13&ndash;35</li>
+      </ul>
+      <p>The Emmaus road is the right passage for tonight. Two people walking <em>away</em> from Jerusalem, disappointed, explaining the whole thing badly to a stranger who turns out to be the subject of it. They only recognize him at dinner, at the breaking of bread, and then he is gone and they say to each other: <q>Did not our hearts burn within us while he talked to us on the road?</q></p>
+      <p>Ten days of roads and talking. Ask the table what burned.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>Where did my heart burn this week — and am I going to do anything about it, or just describe it?</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- DAY 10 -->
+  <section class="day" id="day10">
+    <div class="day-head">
+      <p class="day-num">Day Ten <span class="date">Wednesday, 18 November</span></p>
+      <h2>Going Home</h2>
+      <p class="thread">Tel Aviv, Frankfurt, Dulles, Cincinnati. The part nobody prepares for.</p>
+    </div>
+
+    <article class="stop">
+      <h3>Re-entry</h3>
+      <p class="locator">TLV &rarr; FRA &rarr; IAD &rarr; CVG</p>
+      <ul class="refs">
+        <li class="key">Acts 1:1&ndash;11</li>
+        <li>Luke 24:44&ndash;53</li>
+        <li>2 Corinthians 3:2&ndash;3</li>
+      </ul>
+      <p>The disciples' last question was about timetables — <em>is this when you restore the kingdom?</em> — and he refused to answer it, and gave them an assignment instead: you will be my witnesses, here, then nearby, then everywhere. Then he left, and they stood looking up until somebody asked why they were still standing there.</p>
+      <p>The risk of a trip like this is that it becomes a story you tell rather than something that changed you. The difference usually gets decided in the first two weeks back, not in the Garden Tomb.</p>
+      <p>So pick one thing on the flight. Not ten. One.</p>
+      <div class="rubric">
+        <p><span class="rubric-label">Carry this</span>What is the one thing I am going to do differently — and who am I going to tell, this week, so that it costs me something to drop it?</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- COLOPHON -->
+  <section class="colophon">
+    <h2>Each night, four lines</h2>
+    <p>Ten days blur badly, and you will not invent a good structure at 10pm in Tiberias. Same four prompts, every night, five minutes. Write in the same notebook you brought for the trip and nowhere else.</p>
+    <ul class="journal">
+      <li>Where we were today, in one sentence.</li>
+      <li>The passage that landed, and the line from it.</li>
+      <li>What surprised me — what was not how I had pictured it.</li>
+      <li>The question I am still carrying.</li>
+    </ul>
+    <p><strong>Bring:</strong> your own ESV with margins you're willing to write in, a pen that works, that notebook, and broken-in shoes with real tread. The Judean desert day and the Old City day are both hard on feet, and Jerusalem limestone is polished slick by two millennia of pilgrims.</p>
+    <p><strong>Ask your guide things.</strong> Israeli guides complete a demanding two-year licensing course and many are formidable — historians, archaeologists, people with strong and well-informed opinions. Ask them the contested questions, not just the itinerary ones. It is the single highest-yield thing you can do on this trip, and most travelers never do it.</p>
+  </section>
+
+</div>
+
+<script>
+
+  (function () {
+    var rows = Array.prototype.slice.call(document.querySelectorAll('.rd'));
+    if (!rows.length) return;
+    var KEY = 'gtj-reading-v1';
+    var store = {};
+    try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { store = {}; }
+
+    var fill = document.getElementById('progFill');
+    var txt = document.getElementById('progTxt');
+    function paint() {
+      var done = 0;
+      rows.forEach(function (r) {
+        var on = r.querySelector('input').checked;
+        r.classList.toggle('is-done', on);
+        if (on) done++;
+      });
+      var pct = Math.round(done / rows.length * 100);
+      if (fill) fill.style.width = pct + '%';
+      if (txt) txt.textContent = done + ' of ' + rows.length + ' read';
+    }
+
+    rows.forEach(function (r) {
+      var box = r.querySelector('input');
+      var d = r.getAttribute('data-date');
+      if (store[d]) box.checked = true;
+      box.addEventListener('change', function () {
+        if (box.checked) { store[d] = 1; } else { delete store[d]; }
+        try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {}
+        paint();
+      });
+    });
+    paint();
+
+    var now = new Date();
+    var today = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+    var target = null;
+    rows.forEach(function (r) {
+      if (r.getAttribute('data-date') === today) { r.classList.add('is-today'); target = r; }
+    });
+    if (!target) {
+      for (var i = 0; i < rows.length; i++) {
+        if (rows[i].getAttribute('data-date') > today) { target = rows[i]; break; }
+      }
+      if (!target) target = rows[rows.length - 1];
+    }
+    var btn = document.getElementById('jumpToday');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        var box = target.querySelector('input');
+        if (box) box.focus({ preventScroll: true });
+      });
+    }
+  })();
+
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.daystrip a'));
+    var strip = document.getElementById('daystrip');
+    var sections = links.map(function (a) {
+      return document.getElementById(a.getAttribute('href').slice(1));
+    });
+
+    function setActive(idx) {
+      links.forEach(function (a, i) {
+        var on = i === idx;
+        a.classList.toggle('is-active', on);
+        if (on && strip) {
+          var l = a.offsetLeft, r = l + a.offsetWidth;
+          if (l < strip.scrollLeft || r > strip.scrollLeft + strip.clientWidth) {
+            strip.scrollTo({ left: Math.max(0, l - 40), behavior: 'smooth' });
+          }
+        }
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      var visible = {};
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          visible[e.target.id] = e.isIntersecting;
+        });
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i] && visible[sections[i].id]) { setActive(i); break; }
+        }
+      }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+      sections.forEach(function (s) { if (s) io.observe(s); });
+    }
+
+    setActive(0);
+  })();
+</script>
+
+</body>
+</html>
